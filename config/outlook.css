@@ -1,0 +1,268 @@
+/*page main outlook*/
+*{
+    margin:0 auto;
+    padding:0;
+    box-sizing:border-box;
+}
+html,body{
+    width:100%;
+    min-height:100%;
+    height:auto;
+    /*-webkit-filter:grayscale(100%);*/
+}
+#container{
+    width:100%;
+    min-height:100%;
+    height:auto;
+    display:grid;
+    grid-template-rows:auto 1fr auto;
+}
+#head{
+    position:sticky;
+    width:100%;
+    height:64px;
+    top:0;
+    bottom:8px;
+    z-index:1;
+    background-color:#002FA7;
+    padding:10px;
+    box-shadow:0px 8px 40px 2px rgba(0,0,0,0.5);
+}
+#main{
+    width:1508px;
+}
+#body{
+    position:relative;
+    width:1250px;
+    background-color:#EEE;
+    border-radius:4px;
+    padding:64px;
+    padding-top:16px;
+    float:left;
+    margin:8px auto;
+    margin-left:258px;
+    /*overflow-y:scroll;*/
+}
+#sidebox{
+    position:fixed;
+    width:250px;
+    height:auto;
+    top:72px;
+    bottom:8px;
+    float:left;
+    border-radius:4px;
+    background-color:#EEE;
+    margin:0 auto;
+    overflow-x:hidden;
+}
+/*normal object outlook*/
+h1,h2,h3,h4,h5,h6{
+    text-indent:-32px;
+    font-weight:555;
+}
+#pagetitle{
+    text-indent:0;
+    color:#FFF;
+    font-weight:500;
+    font-family:"楷体";
+}
+#contenttitle{
+    font-weight:500;
+    font-family:"等线";
+}
+div.hintbox{
+    position:relative;
+    width:85%;
+    min-height:32px;
+    height:auto;
+    margin:4px auto;
+    border-style:solid;
+    border-color:#CCC;
+    border-width:2px;
+    border-radius:3px;
+    background-color:#DDD;
+    padding:16px;
+}
+div.rmenu{
+    position:relative;
+    width:256px;
+    min-height:32px;
+    height:auto;
+    float:right;
+    margin:4px auto;
+    right:81px;
+    border-style:solid;
+    border-color:#CCC;
+    border-width:2px;
+    border-radius:3px;
+    background-color:#DDD;
+    padding:16px;
+}
+div.lmenu{
+    position:relative;
+    width:256px;
+    min-height:32px;
+    height:auto;
+    float:left;
+    margin:4px auto;
+    left:81px;
+    border-style:solid;
+    border-color:#CCC;
+    border-width:2px;
+    border-radius:3px;
+    background-color:#DDD;
+    padding:16px;
+}
+img{
+    position:relative;
+    max-width:100%;
+    max-height:100%;
+    width:auto;
+    height:auto;
+    /*border-style:solid;
+    border-color:#DDD;
+    border-width:2px;
+    border-radius:4px;*/
+}
+div.imgbig{
+    position:relative;
+    max-width:1028px;
+    max-height:512px;
+    width:auto;
+    height:auto;
+    margin:4px;
+}
+div.imglside{
+    position:relative;
+    float:left;
+    margin:4px;
+}
+div.imgrside{
+    position:relative;
+    float:right;
+    margin:4px;
+}
+p{
+    font-family:"微软雅黑";
+}
+p.code,span.code{
+    font-family:"Consolas";
+    border-style:solid;
+    border-width:2px;
+    border-color:#CACACA;
+    border-radius:5px;
+    background-color:#DDD;
+}
+span.codestring{
+    font-family:"Consolas";
+    font-weight:555;
+    color:#0A0;
+}
+span.codeint{
+    font-family:"Consolas";
+    color:#02F;
+}
+span.codecmd{
+    font-family:"Consolas";
+    font-weight:555;
+    color:#D00;
+}
+span.codefunc{
+    font-family:"Consolas";
+    font-weight:555;
+    color:#C0C;
+}
+span.codeexplain{
+    font-family:"Consolas";
+    font-style:italic;
+    color:#999;
+}
+p.caution,span.caution{
+    font-weight:555;
+}
+p.warning,span.warning{
+    font-weight:555;
+    text-decoration:underline;
+    font-style:italic;
+    color:#F00;
+}
+p.explain,span.explain{
+    font-style:italic;
+    color:#AAA;
+}
+p.delete,span.delete{
+    font-style:italic;
+    text-decoration:line-through;
+    color:#BBB;
+}
+p.hiddentext,span.hiddentext{
+    color:#EEE;
+    font-style:italic;
+    text-decoration:line-through;
+}
+span{
+    font-family:"微软雅黑";
+}
+hr{
+    width:80%;
+    margin:16px auto;
+}
+a.sblink{
+    color:#000;
+    padding:16px;
+    text-decoration:none;
+    display:block;
+    transition:color 0.2s;
+}
+a.sblink:hover{
+    background-color:#E2E2E2;
+    text-decoration:none;
+    color:#000;
+}
+a.menuanchor{
+    color:#333;
+    text-decoration:none;
+}
+a.menuanchor:hover{
+    color:#44A;
+    text-decoration:none;
+}
+table{
+    margin:4px auto;
+    width:80%;
+}
+td.key{
+    position:relative;
+    border-style:hide;
+    border-bottom-style:solid;
+    border-width:1px;
+    border-color:#BBB;
+    width:10%;
+    height:8px;
+    color:#7A7A7A;
+    text-indent:0;
+    font-weight:555;
+    overflow-x:hidden;
+}
+td.value{
+    position:relative;
+    border-style:hide;
+    border-bottom-style:solid;
+    border-width:1px;
+    border-color:#BBB;
+    width:40%;
+    height:8px;
+    text-indent:0;
+    overflow-x:hidden;
+}
+ol{
+    padding:16px;
+    padding-top:4px;
+    padding-bottom:4px;
+}
+ul{
+    padding:16px;
+    padding-top:4px;
+    padding-bottom:4px;
+    list-style-type:disc;
+}
