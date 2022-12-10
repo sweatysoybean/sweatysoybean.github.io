@@ -72,7 +72,7 @@ h1,h2,h3,h4,h5,h6{
 }
 div.hintbox{
     position:relative;
-    width:85%;
+    width:1028px;
     min-height:32px;
     height:auto;
     margin:4px auto;
@@ -113,16 +113,18 @@ div.lmenu{
     background-color:#DDD;
     padding:16px;
 }
+div.categblock{
+    position:relative;
+    width:1125px;
+    min-height:128px;
+    height:auto;
+}
 img{
     position:relative;
     max-width:100%;
     max-height:100%;
     width:auto;
     height:auto;
-    /*border-style:solid;
-    border-color:#DDD;
-    border-width:2px;
-    border-radius:4px;*/
 }
 div.imgbig{
     position:relative;
@@ -146,7 +148,7 @@ p{
     font-family:"微软雅黑";
 }
 p.code,span.code{
-    font-family:"Consolas";
+    font-family:Consolas,Courier;
     border-style:solid;
     border-width:2px;
     border-color:#CACACA;
@@ -154,26 +156,26 @@ p.code,span.code{
     background-color:#DDD;
 }
 span.codestring{
-    font-family:"Consolas";
+    font-family:Consolas,Courier;
     font-weight:555;
     color:#0A0;
 }
 span.codeint{
-    font-family:"Consolas";
+    font-family:Consolas,Courier;
     color:#02F;
 }
 span.codecmd{
-    font-family:"Consolas";
+    font-family:Consolas,Courier;
     font-weight:555;
     color:#D00;
 }
 span.codefunc{
-    font-family:"Consolas";
+    font-family:Consolas,Courier;
     font-weight:555;
     color:#C0C;
 }
 span.codeexplain{
-    font-family:"Consolas";
+    font-family:Consolas,Courier;
     font-style:italic;
     color:#999;
 }
