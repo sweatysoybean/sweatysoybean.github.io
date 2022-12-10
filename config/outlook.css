@@ -59,6 +59,7 @@ html,body{
 h1,h2,h3,h4,h5,h6{
     text-indent:-32px;
     font-weight:555;
+    font-family:"微软雅黑";
 }
 #pagetitle{
     text-indent:0;
@@ -69,6 +70,14 @@ h1,h2,h3,h4,h5,h6{
 #contenttitle{
     font-weight:500;
     font-family:"等线";
+}
+h1.cbname{
+    text-align:center;
+    background-color:#002FA7;
+    padding:4px;
+    color:#FFF;
+    border-radius:4px 4px 0 0;
+    margin-bottom:8px;
 }
 div.hintbox{
     position:relative;
@@ -115,9 +124,13 @@ div.lmenu{
 }
 div.categblock{
     position:relative;
-    width:1125px;
+    width:1250-128px;
     min-height:128px;
     height:auto;
+    margin:0 auto;
+    margin-top:16px;
+    background-color:#FAFAFA;
+    border-radius:4px;
 }
 img{
     position:relative;
@@ -201,6 +214,9 @@ p.hiddentext,span.hiddentext{
     color:#EEE;
     font-style:italic;
     text-decoration:line-through;
+}
+.cbtext{
+    text-indent:32px;
 }
 span{
     font-family:"微软雅黑";
