@@ -41,7 +41,6 @@ html,body{
     float:left;
     margin:8px auto;
     margin-left:258px;
-    /*overflow-y:scroll;*/
 }
 #sidebox{
     position:fixed;
@@ -53,7 +52,7 @@ html,body{
     border-radius:4px;
     background-color:#EEE;
     margin:0 auto;
-    overflow-x:hidden;
+    overflow:hidden;
 }
 /*normal object outlook*/
 h1,h2,h3,h4,h5,h6{
@@ -215,7 +214,7 @@ p.hiddentext,span.hiddentext{
     font-style:italic;
     text-decoration:line-through;
 }
-.cbtext{
+p.cbtext{
     text-indent:32px;
 }
 span{
@@ -225,12 +224,20 @@ hr{
     width:80%;
     margin:16px auto;
 }
+a{
+    color:#00F;
+}
+a:hover{
+    color:#F00;
+}
+a:visited{
+    color:#00F;
+}
 a.sblink{
     color:#000;
     padding:16px;
     text-decoration:none;
     display:block;
-    transition:color 0.2s;
 }
 a.sblink:hover{
     background-color:#E2E2E2;
