@@ -209,7 +209,7 @@ p.delete,span.delete{
     text-decoration:line-through;
     color:#BBB;
 }
-p.hiddentext,span.hiddentext{
+p.hidden,span.hidden{
     color:#EEE;
     font-style:italic;
     text-decoration:line-through;
