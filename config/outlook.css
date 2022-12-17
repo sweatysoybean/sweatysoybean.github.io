@@ -27,6 +27,10 @@ html,body{
     background-color:#002FA7;
     padding:10px;
     box-shadow:0px 8px 40px 2px rgba(0,0,0,0.5);
+    user-select:none;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
 }
 #main{
     width:1508px;
@@ -53,6 +57,10 @@ html,body{
     background-color:#EEE;
     margin:0 auto;
     overflow:hidden;
+    user-select:none;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
 }
 /*normal object outlook*/
 h1,h2,h3,h4,h5,h6{
@@ -65,6 +73,14 @@ h1,h2,h3,h4,h5,h6{
     color:#FFF;
     font-weight:500;
     font-family:"楷体";
+}
+#menutitle{
+    text-indent:16px;
+}
+#menu{
+    padding:32px;
+    padding-top:4px;
+    padding-bottom:4px;
 }
 #contenttitle{
     font-weight:500;
@@ -91,7 +107,7 @@ div.hintbox{
     background-color:#DDD;
     padding:16px;
 }
-div.rmenu{
+/*div.rmenu{
     position:relative;
     width:256px;
     min-height:32px;
@@ -120,7 +136,7 @@ div.lmenu{
     border-radius:3px;
     background-color:#DDD;
     padding:16px;
-}
+}*/
 div.categblock{
     position:relative;
     width:1250-128px;
