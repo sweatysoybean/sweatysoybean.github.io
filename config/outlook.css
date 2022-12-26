@@ -8,7 +8,6 @@ html,body{
     width:100%;
     min-height:100%;
     height:auto;
-    /*-webkit-filter:grayscale(100%);*/
 }
 #container{
     width:100%;
@@ -107,36 +106,6 @@ div.hintbox{
     background-color:#DDD;
     padding:16px;
 }
-/*div.rmenu{
-    position:relative;
-    width:256px;
-    min-height:32px;
-    height:auto;
-    float:right;
-    margin:4px auto;
-    right:81px;
-    border-style:solid;
-    border-color:#CCC;
-    border-width:2px;
-    border-radius:3px;
-    background-color:#DDD;
-    padding:16px;
-}
-div.lmenu{
-    position:relative;
-    width:256px;
-    min-height:32px;
-    height:auto;
-    float:left;
-    margin:4px auto;
-    left:81px;
-    border-style:solid;
-    border-color:#CCC;
-    border-width:2px;
-    border-radius:3px;
-    background-color:#DDD;
-    padding:16px;
-}*/
 div.categblock{
     position:relative;
     width:1250-128px;
@@ -244,7 +213,7 @@ a{
     color:#00F;
 }
 a:hover{
-    color:#F00;
+    color:#F00 !important;
 }
 a:visited{
     color:#00F;
