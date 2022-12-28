@@ -161,15 +161,10 @@ span.codeint{
     font-family:Consolas,Courier;
     color:#02F;
 }
-span.codecmd{
+span.codeidtf{
     font-family:Consolas,Courier;
     font-weight:555;
     color:#D00;
-}
-span.codefunc{
-    font-family:Consolas,Courier;
-    font-weight:555;
-    color:#C0C;
 }
 span.codeexplain{
     font-family:Consolas,Courier;
@@ -227,14 +222,14 @@ a.sblink{
 a.sblink:hover{
     background-color:#E2E2E2;
     text-decoration:none;
-    color:#000;
+    color:#000 !important;
 }
 a.menuanchor{
     color:#333;
     text-decoration:none;
 }
 a.menuanchor:hover{
-    color:#44A;
+    color:#44A !important;
     text-decoration:none;
 }
 table{
