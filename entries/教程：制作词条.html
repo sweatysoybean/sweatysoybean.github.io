@@ -35,6 +35,8 @@
                     <p>流汗黄豆百科本来就是一个娱乐性质的网站，不是作者的私人日记，所以一开始就有想过其他人也可以参与编辑。而且确实有人有参与的意愿。</p>
                     <p>所以就出了这么一篇教程，教大家自己写词条。</p>
                     <h1>方法一</h1>
+                    <p>适合硬核的牛波一小朋友，zhuangbility的小朋友，以及关心作者的小朋友。</p>
+                    <p>由于实现难度较大，所以确实因为某些原因不能直接用这个方法的可以去看方法二。</p>
                     <p>直接按照教程写出网页文件（难度真的不难，不用额外去学东西，除非你不会打字你就得去学打字）。</p>
                     <p class="explain">发给作者，作者可能会轻微改动，改动较大或内容不合适等会通知你。</p>
                     <h2>准备</h2>
@@ -53,6 +55,7 @@
                         </li>
                     </ul>
                     <h2>开始</h2>
+                    <a class="downloadbutton" href="教程：制作词条.src/模板包.zip">↓模板包压缩包下载↓</a>
                     <p>新建一个文本文档，暂时不用管名字。</p>
                     <p>进去之后在里面复制粘贴（最好是复制粘贴）或者手打输入下面这些内容：</p>
                     <p class="code">
@@ -90,9 +93,54 @@
                     </ul>
                     <p>然后，保存文件都会吧？以Windows的记事本为例，将文件保存在任意位置，到时候找得着就行。</p>
                     <p>注意保存的时候名称就用你的词条名后面加个<span class="code">.html</span>，文件名下面的“保存类型”点一下，弹出来的列表里选择“所有类型（*.*）”。</p>
-                    <p></p>
                     <h3>注意事项</h3>
-                    <p></p>
+                    <p>词条名的命名有一定限制。</p>
+                    <ul>
+                        <li>名称不能超过30个字符（包括所有类型的符号，不过像<span class="code">&amp;nbsp;</span>这种转义字符实体在代码中占多个字符但是显示出来只占一个字符，算一个字符。</li>
+                        <li>名称如果包含连续的空格，则需要把空格（每一个空格）替换成转义字符实体<span class="code">&amp;nbsp;</span>。</li>
+                        <li>不要使用像“这样做香翅捞饭，鸡肉咸香又带有一丝甘甜，太下饭了！”这样的像短视频和博文小文章的诡异标题。你想想百科词条该用什么名字。</li>
+                        <li>名称里不能包括换行。你现在也应该不会在HTML里换行才对。</li>
+                        <li>教程类词条标题格式应该是“教程：（你的教程名）”，就像这个教程一样。</li>
+                        <li>避开使用emoji表情、怪异或者少见不常用的符号、Tab、链接、有误导性或法律性的符号 、网址等。</li>
+                        <li>内容不合适也会打回。</li>
+                    </ul>
+                    <h2>编写内容</h2>
+                    <p class="caution">注：每行代码前面请添加20个空格保持对齐。代码中的空格也需要添加。</p>
+                    <p>所有部件（元素）的代码其实除了部件内容外代码形式都是挺相似的。下面介绍一下部件代码都是如何组成的。</p>
+                    <p class="caution">普通形式</p>
+                    <p class="code">&lt;<span class="codeidtf">元素名</span> <span class="codefunc">属性名</span>="<span class="codestring">属性值</span>"><span class="codeint">内容</span>&lt;/<span class="codeidtf">元素名</span>></p>
+                    <p class="caution">无内容纯标签形式</p>
+                    <p class="code">&lt;<span class="codeidtf">元素名</span> /></p>
+                    <p class="caution">嵌套形式</p>
+                    <p class="code">&lt;<span class="codeidtf">元素名</span> <span class="codefunc">属性名</span>="<span class="codestring">属性值</span>"><br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="codeint">内容</span><br />
+                        &lt;/<span class="codeidtf">元素名</span>>
+                    </p>
+                    <p>上面的“属性名”和“属性值”是成对的，以下简称属性。</p>
+                    <p>一般来说一个元素可以没有属性，不一定要写属性；一个元素也可以有多个属性，不同属性之间用空格隔开来；但是某些特殊的就一定得有属性，一定要有属性的下面会讲到。</p>
+                    <p>属性有很多种，每一种的功能也当然是不一样的，下面介绍的元素也都会写可以用哪些属性或必须用哪些属性，以及使用的场合。</p>
+                    <h3>元素（部件）代码列表</h3>
+                    <p>标红色的是必要属性、紫色的是可选属性、蓝色的是内容。属性值里的“value”则是可以替换值的地方。</p>
+                    <ul>
+                        <li>
+                            <p class="caution">普通文本段落</p>
+                            <p>普通的文本段落，固定至少占一行。</p>
+                            <p>示例：</p>
+                            <br /><p>哪个小朋友半夜不睡觉？哪个小朋友半夜不睡觉我就到你家里抓你！把你抓走！睡不睡！！！</p><br />
+                            <p>代码：</p>
+                            <p class="code">&lt;p <span class="codefunc">class</span>=<span class="codestring">"value"</span>><span class="codeint">内容</span>&lt;/p></p>
+                            <p>属性class可用的值：</p>
+                            <ul>
+                                <li><span class="caution">caution</span> 加粗显示。</li>
+                                <li><span class="caution">warning</span> 加粗+斜体+标红+下划线显示，多用于需要引起注意的重要事项。</li>
+                                <li><span class="caution">explain</span> 颜色减淡+斜体显示，多用于不怎么重要的解释性文本。</li>
+                                <li><span class="caution">delete</span> 颜色再减淡，并加以删除线，多带有娱乐性和调侃性。</li>
+                                <li><span class="caution">hidden</span> 直接隐藏，文本颜色与背景颜色相同，需要在电脑端上选中文本才能看见。直接说出来不是特别好或者隐藏起来更有趣的可以使用。</li>
+                                <li><span class="caution">code</span> 代码块，字体为代码字体，之所以叫代码块也是因为设计了边框，页首提示框和下载按钮的边框都是参照这个的边框的。</li>
+                                <li><p class="delete">cbtext 应用于主页中的分类块中的值，由于词条中不需要用到分类块，且这个值本质上就是缩进32像素，使用在词条中相当不和谐，所以不要使用。</p></li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>

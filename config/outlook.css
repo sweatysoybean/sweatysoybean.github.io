@@ -166,6 +166,10 @@ span.codeidtf{
     font-weight:555;
     color:#D00;
 }
+span.codefunc{
+    font-family:Consolas,Courier;
+    color:#A0A;
+}
 span.codeexplain{
     font-family:Consolas,Courier;
     font-style:italic;
@@ -231,6 +235,26 @@ a.menuanchor{
 a.menuanchor:hover{
     color:#44A !important;
     text-decoration:none;
+}
+a.downloadbutton{
+    display:inline-block;
+    position:relative;
+    padding:12px;
+    border-style:solid;
+    border-width:2px;
+    border-color:#CACACA;
+    border-radius:5px;
+    text-decoration:none;
+    color:#000 !important;
+    background-color:#DDD;
+}
+a.downloadbutton:hover{
+    color:#000 !important;
+    background-color:#D4D4D4;
+}
+a.downloadbutton:visited{
+    color:#000 !important;
+    text-decoration:underline
 }
 table{
     margin:4px auto;
