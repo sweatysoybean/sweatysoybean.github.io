@@ -85,6 +85,7 @@
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;id="sidebox"><br />
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;class="sblink"&nbsp;href="">刷新&lt;/a><br />
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;class="sblink"&nbsp;href="#">回到顶部&lt;/a><br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="codeint">menu</span><br />
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div><br />
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;id="body"><br />
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&nbsp;id="contenttitle"><span class="codeint"></span>&lt;/h1><br />
@@ -99,6 +100,7 @@
                     <ul>
                         <li>title&nbsp;&nbsp;→&nbsp;&nbsp;你的词条的标题，也就是你的词条的名称</li>
                         <li>content&nbsp;&nbsp;→&nbsp;&nbsp;页面内容，待会儿马上讲</li>
+                        <li>menu&nbsp;&nbsp;→&nbsp;&nbsp;目录，非必选项不一定要用，不用的记得把menu那一行给去掉，怎么使用下面会讲到</li>
                     </ul>
                     <p>然后，保存文件都会吧？以Windows的记事本为例，将文件保存在任意位置，到时候找得着就行。</p>
                     <p>注意保存的时候名称就用你的词条名后面加个<span class="code">.html</span>，文件名下面的“保存类型”点一下，弹出来的列表里选择“所有类型（*.*）”。</p>
@@ -123,12 +125,12 @@
                     <p class="caution">注：每行代码前面请添加20个空格保持对齐。代码中的空格也需要添加。</p>
                     <p>所有部件（元素）的代码其实除了部件内容外代码形式都是挺相似的。下面介绍一下部件代码都是如何组成的。</p>
                     <p class="caution">普通形式</p>
-                    <p class="code">&lt;<span class="codeidtf">元素名</span> <span class="codefunc">属性名</span>="<span class="codestring">属性值</span>"><span class="codeint">内容</span>&lt;/<span class="codeidtf">元素名</span>></p>
+                    <p class="code">&lt;<span class="codeidtf">元素名</span> <span class="codefunc">属性名</span>=<span class="codestring">"属性值"</span>><span class="codeint">内容</span>&lt;/<span class="codeidtf">元素名</span>></p>
                     <p class="caution">无内容纯标签形式</p>
                     <p class="code">&lt;<span class="codeidtf">元素名</span> /></p>
                     <p class="caution">嵌套形式</p>
-                    <p class="code">&lt;<span class="codeidtf">元素名</span> <span class="codefunc">属性名</span>="<span class="codestring">属性值</span>"><br />
-                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="codeint">内容</span><br />
+                    <p class="code">&lt;<span class="codeidtf">元素名</span> <span class="codefunc">属性名</span>=<span class="codestring">"属性值"</span>><br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="codeint">内容（可以是元素标签代码）</span><br />
                         &lt;/<span class="codeidtf">元素名</span>>
                     </p>
                     <p>上面的“属性名”和“属性值”是成对的，以下简称属性。</p>
@@ -204,8 +206,74 @@
                                     <li><span class="caution">codeidtf</span> 标红色且加粗的内容，原本是代码中的保留字关键字，你也懂的后来发生了什么。</li>
                                     <li><span class="caution">codeexplain</span> 标灰色并使用斜体的内容，用来表示注释、注释性文本和省略的代码。</li>
                                 </ul>
-
                             </ul>
+                        </li>
+                        <li>
+                            <p class="caution">超链接文本</p>
+                            <p>用于超链接的文本，可以占一行也可以使用在一段文本中，点击链接后会传送到指定网址、文章指定位置，或者开始下载指定文件。</p>
+                            <p>示例：</p>
+                            <br />
+                            <a href="#">不用点我，我啥也不会干，只会在地址栏里面添加一个“#”。</a>
+                            <br />
+                            <p>代码：</p>
+                            <p class="code">&lt;a <span class="codeidtf">href</span>=<span class="codestring">"value"</span> <span class="codefunc">class</span>=<span class="codestring">"value"</span>><span class="codeint">内容</span>&lt;/a></p>
+                            <p>属性href的使用：</p>
+                            <p>有三种使用方法，分别是绝对路径（几乎不用）、相对路径（词条里很少用）和锚定位（绝大部分情况下仅在目录中使用）</p>
+                            <ul>
+                                <li>
+                                    <p class="caution">绝对路径：</p>
+                                    <p>直接设置为一个网址，用来访问非流汗黄豆百科站内的资源（访问站内资源用相对路径即可），现在几乎不需要用，目前没有任何一个页面有用到绝对路径。当然如果你的词条是借鉴外部网站上的某篇文章，你则需要带上原文链接。</p>
+                                    <p>示例：</p>
+                                    <p>GitHub官网 https://github.com</p>
+                                    <p>百度翻译 https://fanyi.baidu.com</p>
+                                    <p>CSDN官网 https://www.csdn.net</p>
+                                    <p>奇妙的一个邮箱网站 https://fuckyou.com</p>
+                                </li>
+                                <li>
+                                    <p class="caution">相对路径：</p>
+                                    <p>用于访问站内资源，词条中不怎么使用。要用一般也是用于该词条中的资源的获取。</p>
+                                    <p class="explain">一个词条所需要用到的资源（文件）比如图片，在词条里让大家下载的文件等等都需要整理在一个文件夹里的。访问这些文件就是用相对路径。</p>
+                                    <p class="explain">相对路径的路径是相对于文件自身的，下面所说的起始文件就是词条文件自身。</p>
+                                    <p class="caution">使用</p>
+                                    <ul>
+                                        <li>跟起始文件处在同一目录（文件夹）中的文件或者文件夹，直接输入该文件/文件夹的名字即可。如果是一个文件，请加上扩展名。</li>
+                                        <li>如果像上面那样访问了一个同级目录下的文件夹，想要访问文件夹的内容，请在文件夹的名字后面加一个斜杠，并加上文件/文件夹的名字。</li>
+                                        <li>想访问上级目录的内容（一般不会），输入<span class="code">../</span>加上文件或者文件夹名即可。</li>
+                                    </ul>
+                                    <p class="caution">示例</p>
+                                    <p>假设文件夹结构是这样的</p>
+                                    <p class="code">
+                                        桌面<br />
+                                        ├流汗黄豆百科<br />
+                                        |└图标.ico<br />
+                                        └我的词条<br />
+                                        &nbsp;├词条测试.html <span class="codeexplain">（起始文件）</span><br />
+                                        &nbsp;├图片一.png<br />
+                                        &nbsp;├词条.src<br />
+                                        &nbsp;|└图片二.jpg<br />
+                                        &nbsp;└文件夹一<br />
+                                        &nbsp;&nbsp;└文件夹二<br />
+                                        &nbsp;&nbsp;&nbsp;└图片三.bmp
+                                    </p>
+                                    <p>访问同一目录的一个叫做“图片一”的png图片：图片一.png</p>
+                                    <p>访问同一目录的一个叫做“词条.src”的文件夹（目录）内的另一个叫做“图片二”的jpg图片：词条.src/图片二.jpg</p>
+                                    <p>访问同一目录下的文件夹“文件夹一”里面的文件夹“文件夹二”里面的叫做“图片三”的bmp图片：文件夹一/文件夹二/图片三.bmp</p>
+                                </li>
+                            </ul>
+                            <p>属性class可用的值：</p>
+                            <ul>
+                                <li><span class="caution">sblink</span> 用于侧边栏顶端的几个链接，词条中不要使用。</li>
+                                <li><span class="caution">menuanchor</span> 用于目录中的锚定位，讲目录的时候会讲到。</li>
+                                <li><span class="caution">downloadbutton</span> 用于下载按钮。使用这个的时候文本的开始和结束请各添加一个“↓”。</li>
+                            </ul>
+                            <p>注：使用下载按钮时，请确保链接所指向的文件不属于下列文件类型：</p>
+                            <ul>
+                                <li>图片文件，比如PNG、JPG、BMP、WEBP、GIF、JPEG、JPP、JPE</li>
+                                <li>视频文件，比如MP4、MOV、ANIM、WEBM、FLA、GIF</li>
+                                <li>网页/网页程序文件，比如HTML、HTM、MHT、MHTML、XHTML、XML、CSS、URL、JS、ASP、ASPX、PHP</li>
+                            </ul>
+                            <p>总而言之就是<span class="caution">浏览器能直接打开的文件不要放在下载按钮里。</span></p>
+                            <p class="explain">如果确实是要下载这些类型的文件的话，可以将文件压缩为一个压缩文件，比如ZIP、RAR等。</p>
                         </li>
                     </ul>
                 </div>
