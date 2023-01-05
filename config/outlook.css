@@ -123,14 +123,6 @@ img{
     width:auto;
     height:auto;
 }
-div.imgbig{
-    position:relative;
-    max-width:1028px;
-    max-height:512px;
-    width:auto;
-    height:auto;
-    margin:4px;
-}
 div.imglside{
     position:relative;
     float:left;

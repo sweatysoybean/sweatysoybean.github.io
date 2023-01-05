@@ -29,6 +29,11 @@
                 <div id="body">
                     <h1 id="contenttitle">教程：制作词条</h1>
                     <div class="hintbox">
+                        <p class="caution">本词条/教程的编辑工作正在进行中。</p>
+                        <p>没有写完的词条/教程内容并不完全，现在就着急于浏览没有意义。</p>
+                        <a href="../index">返回主页</a>
+                    </div>
+                    <div class="hintbox">
                         <p class="caution">方法一不适合手机、平板等用户，仅推荐使用电脑。</p>
                         <p>其实方法二也不太适合，尤其是手机。</p>
                         <p></p>
@@ -100,14 +105,14 @@
                     <ul>
                         <li>title&nbsp;&nbsp;→&nbsp;&nbsp;你的词条的标题，也就是你的词条的名称</li>
                         <li>content&nbsp;&nbsp;→&nbsp;&nbsp;页面内容，待会儿马上讲</li>
-                        <li>menu&nbsp;&nbsp;→&nbsp;&nbsp;目录，非必选项不一定要用，不用的记得把menu那一行给去掉，怎么使用下面会讲到</li>
+                        <li>menu&nbsp;&nbsp;→&nbsp;&nbsp;目录，非必选项，不一定要用，不用的记得把menu那一行给去掉，怎么使用下面会讲到</li>
                     </ul>
                     <p>然后，保存文件都会吧？以Windows的记事本为例，将文件保存在任意位置，到时候找得着就行。</p>
                     <p>注意保存的时候名称就用你的词条名后面加个<span class="code">.html</span>，文件名下面的“保存类型”点一下，弹出来的列表里选择“所有类型（*.*）”。</p>
                     <h3>注意事项</h3>
                     <p>词条名的命名有一定限制。</p>
                     <ul>
-                        <li>名称不能超过30个字符（包括所有类型的符号，不过像<span class="code">&amp;nbsp;</span>这种转义字符实体在代码中占多个字符但是显示出来只占一个字符，算一个字符。</li>
+                        <li>名称不能超过30个字符（包括所有类型的符号，以在页面显示的内容为准）</li>
                         <li>名称如果包含连续的空格，则需要把空格（每一个空格）替换成转义字符实体<span class="code">&amp;nbsp;</span>。此外在名称中最好还是要替换的有：
                             <ul>
                                 <li># → <span class="code">&amp;#35;</span></li>
@@ -119,11 +124,10 @@
                         <li>名称里不能包括换行。你现在也应该不会在HTML里换行才对。</li>
                         <li>教程类词条标题格式应该是“教程：（你的教程名）”，就像这个教程一样。</li>
                         <li>避开使用emoji表情、怪异或者少见不常用的符号、Tab、链接、有误导性或法律性的符号 、网址等。</li>
-                        <li>内容不合适也会打回。</li>
                     </ul>
                     <h2 id="编写内容">编写内容</h2>
                     <p class="caution">注：每行代码前面请添加20个空格保持对齐。代码中的空格也需要添加。</p>
-                    <p>所有部件（元素）的代码其实除了部件内容外代码形式都是挺相似的。下面介绍一下部件代码都是如何组成的。</p>
+                    <p>所有部件（元素）的代码（注释不是部件元素）其实除了部件内容外代码形式都是挺相似的。下面介绍一下部件代码都是如何组成的。</p>
                     <p class="caution">普通形式</p>
                     <p class="code">&lt;<span class="codeidtf">元素名</span> <span class="codefunc">属性名</span>=<span class="codestring">"属性值"</span>><span class="codeint">内容</span>&lt;/<span class="codeidtf">元素名</span>></p>
                     <p class="caution">无内容纯标签形式</p>
@@ -144,21 +148,19 @@
                             <p class="caution">标题文本</p>
                             <p>用于标题的文本，亦可用于在目录中定位文章位置，比其他文本等更靠左一点。有6种大小（类型），第一种最大，第四种跟普通加粗文本差不多，第六种最小，可以当做标题等级。</p>
                             <p>示例：</p>
-                            <br />
                             <h1>只因块旋转一分钟</h1>
                             <h2>只因块旋转十分钟</h2>
                             <h3>只因块旋转一小时</h3>
                             <h4>只因块旋转十小时</h4>
                             <h5>只因块旋转一整天</h5>
                             <h6>只因块旋转一个世纪</h6>
-                            <br />
                             <p>代码：</p>
                             <p>最大大小（一级标题）</p>
                             <p class="code">&lt;h1 <span class="codefunc">id</span>=<span class="codestring">"value"</span>><span class="codeint">内容</span>&lt;/h1></p>
                             <p>第二大大小（二级标题）</p>
                             <p class="code">&lt;h2 <span class="codefunc">id</span>=<span class="codestring">"value"</span>><span class="codeint">内容</span>&lt;/h2></p>
                             <p>其实第几级标题就是改一下元素名中h后面的数字。以此类推到h6。当然h4以下的比普通文本还小就不怎么常用了。</p>
-                            <p>提醒：h3及一下（包括h3）就不要用id属性了，下面就会讲到；如果用在提示框（页首提示框，尽管后来被用作其他用途）中，请加一条style属性，并将值设置为<span class="code">text-indent:0;</span>（一定要注意）。</p>
+                            <p>提醒：h3及一下（包括h3）就不要用id属性了，下面就会讲到；如果用在提示框（页首提示框，尽管后来被用作其他用途）中，请加一条style属性，并将值设置为<span class="code">text-indent:0;</span>（每个提示框里的标题文本都要加，一定要注意）。</p>
                             <p>属性id的使用：</p>
                             <ul>
                                 <li>用于在目录中定位，设置了id值就能在目录中放置锚链接定位，后面会讲到。要使用的话直接设置为这个标题的文本内容即可。</li>
@@ -168,7 +170,7 @@
                             <p class="caution">普通文本段落</p>
                             <p>普通的文本段落，固定至少占一行。</p>
                             <p>示例：</p>
-                            <br /><p>哪个小朋友半夜不睡觉？哪个小朋友半夜不睡觉我就到你家里抓你！把你抓走！睡不睡！！！</p><br />
+                            <p>哪个小朋友半夜不睡觉？哪个小朋友半夜不睡觉我就到你家里抓你！把你抓走！睡不睡！！！</p>
                             <p>代码：</p>
                             <p class="code">&lt;p <span class="codefunc">class</span>=<span class="codestring">"value"</span>><span class="codeint">内容</span>&lt;/p></p>
                             <p>属性class可用的值：</p>
@@ -187,7 +189,7 @@
                             <p>在普通的文本段落内使用，用于一行文本内个别文字使用不同样式。</p>
                             <p class="explain">因为一个普通文本段落里所有文本的样式都是一样的（不是说每个字长得一样，是说使用的外观样式，你可以理解为字体或者特效，外观样式是一样的），要在一行里面为单独的一段文本使用不同的样式，就需要用到这个了。</p>
                             <p>示例：（在普通文本段落中演示）</p>
-                            <br /><p>大外孙你<span class="warning">牛波一</span>，你的消费<span class="caution">可不低</span></p><br />
+                            <p>大外孙你<span class="warning">牛波一</span>，你的消费<span class="caution">可不低</span></p>
                             <p>代码：</p>
                             <p class="code"><span class="codeexplain">&lt;父元素>省略的父元素的文本内容</span>&lt;span <span class="codefunc">class</span>=<span class="codestring">"value"</span>><span class="codeint">内容</span>&lt;/span><span class="codeexplain">省略的父元素的文本内容&lt;/父元素></span></p>
                             <p>属性class可用的值：</p>
@@ -212,9 +214,7 @@
                             <p class="caution">超链接文本</p>
                             <p>用于超链接的文本，可以占一行也可以使用在一段文本中，点击链接后会传送到指定网址、文章指定位置，或者开始下载指定文件。</p>
                             <p>示例：</p>
-                            <br />
                             <a href="#">不用点我，我啥也不会干，只会在地址栏里面添加一个“#”。</a>
-                            <br />
                             <p>代码：</p>
                             <p class="code">&lt;a <span class="codeidtf">href</span>=<span class="codestring">"value"</span> <span class="codefunc">class</span>=<span class="codestring">"value"</span>><span class="codeint">内容</span>&lt;/a></p>
                             <p>属性href的使用：</p>
@@ -266,14 +266,63 @@
                                 <li><span class="caution">menuanchor</span> 用于目录中的锚定位，讲目录的时候会讲到。</li>
                                 <li><span class="caution">downloadbutton</span> 用于下载按钮。使用这个的时候文本的开始和结束请各添加一个“↓”。</li>
                             </ul>
-                            <p>注：使用下载按钮时，请确保链接所指向的文件不属于下列文件类型：</p>
-                            <ul>
-                                <li>图片文件，比如PNG、JPG、BMP、WEBP、GIF、JPEG、JPP、JPE</li>
-                                <li>视频文件，比如MP4、MOV、ANIM、WEBM、FLA、GIF</li>
-                                <li>网页/网页程序文件，比如HTML、HTM、MHT、MHTML、XHTML、XML、CSS、URL、JS、ASP、ASPX、PHP</li>
-                            </ul>
-                            <p>总而言之就是<span class="caution">浏览器能直接打开的文件不要放在下载按钮里。</span></p>
-                            <p class="explain">如果确实是要下载这些类型的文件的话，可以将文件压缩为一个压缩文件，比如ZIP、RAR等。</p>
+                            <p class="caution">注：使用下载按钮时，请确保链接所指向的文件不能被浏览器直接打开。能被浏览器直接打开的不会创建下载任务，而是直接打开。浏览器可以直接打开网页文件、网页程序文件、图片、视频等。</p>
+                            <p class="explain">如果确实是要下载这些类型的文件的话，可以将文件压缩为一个压缩文件，比如ZIP、RAR等。这种方式也适用于要下载多个文件的。</p>
+                        </li>
+                    </ul>
+                    <h4>非文本部件类</h4>
+                    <ul>
+                        <li>
+                            <p class="caution">《盒&nbsp;&nbsp;子&nbsp;&nbsp;框&nbsp;&nbsp;框》</p>
+                            <p>实在想不到一个合适的名字。功能跟盒子差不多，各有用途。由于是嵌套型元素，内容可以使元素代码。</p>
+                            <p>没有class属性指定类型的盒子是没有用的，而class属性允许的值的不同也使得盒子的外观和用途变得不同，这里展示除图片框外的所有类型以及他们的名字。</p>
+                            <p>示例：</p>
+                            <div class="hintbox">
+                                <p>页首提示框</p>
+                            </div>
+                            <div class="categblock">
+                                <h1 class="cbname">主页分类块</h1>
+                                <p>内容</p>
+                            </div>
+                            <p>代码：</p>
+                            <p class="code">
+                                &lt;div <span class="codeidtf">class</span>=<span class="codestring">"value"</span>><br />
+                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="codeint">内容</span><br />
+                                &lt;/div>
+                            </p>
+                        </li>
+                    </ul>
+                    <h4>特殊标签类</h4>
+                    <ul>
+                        <li>
+                            <p class="caution">换行标签/标签换行</p>
+                            <p>可以放置在文本中也可以直接使用的换行标签，推荐使用这个而不是换行转义字符。</p>
+                            <p>直接使用而不是在文本中使用会创建一个空行</p>
+                            <p class="explain">浏览器在解析网页文件的时候，代码中的文本里使用换行也会显示为一个空格，代码中的文本里的换行都会转换成一个空格，所以要使用换行就得使用换行标签/换行转义字符。</p>
+                            <p>示例：</p>
+                            <br />
+                            <p>代码：</p>
+                            <p class="code">&lt;br /></p>
+                            <p>对，不需要任何属性，没有属性。</p>
+                        </li>
+                        <li>
+                            <p class="caution">分隔符</p>
+                            <p>一般是单独使用的，创建一个分隔符。有了这个就不要用单独用一个段落打很多个横杠。</p>
+                            <p>理论上属于非文本部件类。</p>
+                            <p>会跟上下内容产生一定量的间隔（16像素）。</p>
+                            <p>示例：</p>
+                            <hr />
+                            <p>代码：</p>
+                            <p class="code">&lt;hr /></p>
+                            <p>对，也不需要任何属性，也是没有属性。</p>
+                        </li>
+                        <li>
+                            <p class="caution">代码注释</p>
+                            <p>不会对网页产生任何影响，只用于给代码添加注释，一般不使用。</p>
+                            <p>注释的代码跟上面的那些代码结构是不一样的。</p>
+                            <p>注释不跟网页内容有关，没有示例。</p>
+                            <p>代码：</p>
+                            <p class="code">&lt;!--<span class="codeint">注释内容</span>--></p>
                         </li>
                     </ul>
                 </div>
