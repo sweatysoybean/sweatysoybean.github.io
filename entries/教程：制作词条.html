@@ -107,7 +107,7 @@
                         <li>content&nbsp;&nbsp;→&nbsp;&nbsp;页面内容，待会儿马上讲</li>
                         <li>menu&nbsp;&nbsp;→&nbsp;&nbsp;目录，非必选项，不一定要用，不用的记得把menu那一行给去掉，怎么使用下面会讲到</li>
                     </ul>
-                    <p>然后，保存文件都会吧？以Windows的记事本为例，将文件保存在任意位置，到时候找得着就行。</p>
+                    <p>然后，保存文件都会吧？将文件保存在任意位置，到时候找得着就行。</p>
                     <p>注意保存的时候名称就用你的词条名后面加个<span class="code">.html</span>，文件名下面的“保存类型”点一下，弹出来的列表里选择“所有类型（*.*）”。</p>
                     <h3>注意事项</h3>
                     <p>词条名的命名有一定限制。</p>
@@ -295,10 +295,107 @@
                                 <li><span class="caution">hintbox</span> 页首提示框，上面展示过。可以在里面写一写得提醒读者的话。</li>
                                 <li><span class="caution">categblock</span> 主页分类块，大部分情况下不在词条中使用，一般的词条，尤其是你们写的词条，一般都不需要。</li>
                                 <li><span class="caution">imglside</span> 用于图片显示，下面会讲到。<span class="warning">警告：本站图片系统并不成熟，不谨慎使用图片可能会使排版混乱甚至文本被遮挡，有的图片可能受版权保护，请三思而后行。</span></li>
+                                <li><span class="caution">imgrside</span> 同imglside。功能与imglside略有不同。</li>
+                                <li><span class="caution">imgbig</span> 同imglside。功能跟imglside和imgrside有所不同。</li>
                             </ul>
                         </li>
                         <li>
-                            <p class="caution"></p>
+                            <p class="caution">表格</p>
+                            <p>能通过行和列规范地存储信息并直观地显示出来的表格，不必过多介绍了。</p>
+                            <p>示例：</p>
+                            <table>
+                                <tr>
+                                    <td class="key">键（信息名）示例</td><td class="value">值（信息内容）示例</td>
+                                    <td class="key">键（信息名）示例</td><td class="value">值（信息内容）示例</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">键（信息名）示例</td><td class="value">值（信息内容）示例</td>
+                                    <td class="key">键（信息名）示例</td><td class="value">值（信息内容）示例</td>
+                                </tr>
+                                <tr>
+                                    <td class="key">键（信息名）示例</td><td class="value">值（信息内容）示例</td>
+                                    <td class="key">键（信息名）示例</td><td class="value">值（信息内容）示例</td>
+                                </tr>
+                            </table>
+                            <table class="nrml">
+                                <tr class="nrml">
+                                    <td class="nrml">名称</td><td class="nrml">被玩梗时间</td><td class="nrml">结果</td>
+                                </tr>
+                                <tr class="nrml">
+                                    <td class="nrml">蔡徐坤</td><td class="nrml">四年</td><td class="nrml">评价“多多努力”</td>
+                                </tr>
+                                <tr class="nrml">
+                                    <td class="nrml">木桶</td><td class="nrml">一两年左右（不确定）</td><td class="nrml">自己玩自己的梗</td>
+                                </tr>
+                                <tr class="nrml">
+                                    <td class="nrml">疆域阿力木</td><td class="nrml">半年左右</td><td class="nrml">虽然有点无语但是至少蜂蜜销量增加</td>
+                                </tr>
+                                <tr class="nrml">
+                                    <td class="nrml">蜜糖</td><td class="nrml">两个月左右</td><td class="nrml">玉玉了</td>
+                                </tr>
+                            </table>
+                            <p>第一种表格的代码示例：</p>
+                            <p class="code">
+                                &lt;table><br />
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr><br />
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td <span class="codeidtf">class</span>=<span class="codestring">"key"</span> <span class="codefunc">colspan</span>=<span class="codestring">"value"</span> <span class="codefunc">rowspan</span>=<span class="codestring">"value"</span>><span class="codeint">键内容</span>&lt;/td><br />
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td <span class="codeidtf">class</span>=<span class="codestring">"value"</span> <span class="codefunc">colspan</span>=<span class="codestring">"value"</span> <span class="codefunc">rowspan</span>=<span class="codestring">"value"</span>><span class="codeint">值内容</span>&lt;/td><br />
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr><br />
+                                &lt;/table>
+                            </p>
+                            <p class="explain">注：因为上面第三行代码太长，所以将第一个td与第二个td分开成不同的行，你在使用的时候可以将这两个td（也就是下面所说的键值对）放在一行。下面所说的键值对每一对都可以放在一行。</p>
+                            <p>第二种表格的代码示例：</p>
+                            <p class="code">
+                                &lt;table <span class="codeidtf">class</span>=<span class="codestring">"nrml"</span>><br />
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr <span class="codeidtf">class</span>=<span class="codestring">"nrml"</span>><br />
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td <span class="codeidtf">class</span>=<span class="codestring">"nrml"</span> <span class="codefunc">colspan</span>=<span class="codestring">"value"</span> <span class="codefunc">rowspan</span>=<span class="codestring">"value"</span>><span class="codeint">内容</span>&lt;/td><br />
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr><br />
+                                &lt;table>
+                            </p>
+                            <p>表格的代码相对来说比较复杂一点，还是需要讲解一下：</p>
+                            <p>代码中的一个tr标签对应着表格里的一行，以下简称行。</p>
+                            <p>一行里面的td标签对应着表格中一行中的一列，以下简称列。注意，这里的列不是表格中的一整列，实际上是类似与表格里的一个小方格。</p>
+                            <p>上面的两种表格使用起来区别比较大，主要是在列的使用上。</p>
+                            <ul>
+                                <li>
+                                    <p>第一种表格是一般用于介绍词条所讲述的内容的部分基本信息。</p>
+                                    <p>第一种表格对列的使用比较特殊：</p>
+                                    <p>每一行固定是有四列的，当然除了最后一行，最后一行可能只有两列。</p>
+                                    <p>表格中也是一个信息名和一个信息内容组成一对，在代码中则是一个class属性为key的列和一个class属性为value的列组成一对，简称一个键值对。</p>
+                                    <p>一个键值对正好就是两个列，所以第一种表格每一行固定只能是有四列或两列。</p>
+                                    <p>参照百度百科、360百科等百科的词条的基本信息表格。</p>
+                                    <p>你可以看看，参照一下本站的<a href="部件展示">部件展示</a>里面所展示的内容。</p>
+                                    <p class="caution">你应该注意，基本信息表格只使用键值对，你不应该使用下面所说的nrml列，这可能会对排版产生未知的伤害。</p>
+                                </li>
+                                <li>
+                                    <p>第二种表格对列的使用由于比较放松，也有需要讲解的：</p>
+                                    <p>还是一样，tr简称行，td简称列。</p>
+                                    <p>一般情况下最好是每一行的列的数量保持一致。每一行的列的宽度是相等的，顶多差一个像素，那个是整除不了的。</p>
+                                    <p>如果每一行的列的数量不相等可能会发生一些很鬼畜的问题。列最多的一行的每一列的宽度似乎会应用于所有列，哪怕某一行列没有那么多。</p>
+                                    <p>当然你如果实在想这么做，你可以看看下面讲的colspan和rowspan。</p>
+                                </li>
+                            </ul>
+                            <p>上面的属性里没有把值设定为value的就是固定的值。value只是用来提醒这里的值是要自己填成别的的。</p>
+                            <p>列（td）的代码中有两个可选值：colspan和rowspan。这两个属性非常不常用，用来指定这个列跨越多少个格子：</p>
+                            <p>colspan指定横向总共跨越（一般是向左）多少格、rowspan指定竖向总共跨越（一般是向下）多少格。跨越了一个格就是总共占了两个格。</p>
+                            <p>如果向左一格向下一格同时出现，左下角一格也会合并进去。以此类推。</p>
+                            <p>演示：</p>
+                            <table class="nrml">
+                                <tr class="nrml">
+                                    <td class="nrml">text</td><td class="nrml" colspan="2">横向横跨</td><td class="nrml">text</td>
+                                </tr>
+                                <tr class="nrml">
+                                    <td class="nrml">text</td><td class="nrml">text</td><td class="nrml">text</td><td class="nrml">text</td>
+                                </tr>
+                            </table>
+                            <table class="nrml">
+                                <tr class="nrml">
+                                    <td class="nrml" rowspan="2">竖向横跨</td><td class="nrml">text</td><td class="nrml">text</td><td class="nrml">text</td>
+                                </tr>
+                                <tr class="nrml">
+                                    <td class="nrml">text</td><td class="nrml">text</td><td class="nrml">text</td>
+                                </tr>
+                            </table>
                         </li>
                     </ul>
                     <h4>特殊标签类</h4>
