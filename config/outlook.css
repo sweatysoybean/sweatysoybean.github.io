@@ -100,7 +100,7 @@ div.hintbox{
     height:auto;
     margin:4px auto;
     border-style:solid;
-    border-color:#CCC;
+    border-color:#CACACA;
     border-width:2px;
     border-radius:3px;
     background-color:#DDD;
@@ -251,6 +251,22 @@ a.downloadbutton:visited{
 table{
     margin:4px auto;
     width:80%;
+    border-collapse:collapse;
+}
+table.nrml,tr.nrml,td.nrml{
+    table-layout: fixed;
+    border-style:solid;
+    border-width:2px;
+    border-color:#CACACA;
+    background-color:#DDD;
+}
+tr.nrml{
+    height:25px;
+}
+td.nrml{
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
 }
 td.key{
     position:relative;
