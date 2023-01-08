@@ -119,7 +119,7 @@ div.categblock{
     width:1250-128px;
     min-height:128px;
     height:auto;
-    margin:0 auto;
+    margin:4px auto;
     margin-top:16px;
     background-color:#FAFAFA;
     border-radius:4px;
@@ -326,3 +326,13 @@ ul{
     padding-bottom:4px;
     list-style-type:disc;
 }
+dl{
+    margin-bottom:8px;
+}
+dt{
+    display:list-item;
+    font-weight:555;
+}
+/*dd{
+    padding-left:24px;
+}*/
