@@ -26,38 +26,24 @@ html,body{
     z-index:1;
     background-color:#002FA7;
     box-shadow:0px 8px 40px 2px rgba(0,0,0,0.5);
+    user-select:none;
     -webkit-user-select:none;
     -moz-user-select:none;
     -ms-user-select:none;
-    user-select:none;
 }
 #main{
-    width:100%;
-}
-@media screen and (min-width:1520px){
-    #main{
-        width:1508px;
-    }
+    width:1508px;
 }
 #body{
     position:relative;
-    /*width:1250px;*/
-    right:8px;
+    width:1250px;
     background-color:#EEE;
     border-radius:4px;
     padding:64px;
     padding-top:16px;
     float:left;
     margin:8px auto;
-    margin-left:266px;
-}
-@media screen and (max-width:600px){
-    #body{
-        width:100%;
-        right:0;
-        margin:0 auto;
-        border-radius:0;
-    }
+    margin-left:258px;
 }
 #sidebox{
     position:fixed;
@@ -70,15 +56,10 @@ html,body{
     background-color:#EEE;
     margin:0 auto;
     overflow:hidden;
+    user-select:none;
     -webkit-user-select:none;
     -moz-user-select:none;
     -ms-user-select:none;
-    user-select:none;
-}
-@media screen and (max-width:600px){
-    #sidebox{
-        display:none;
-    }
 }
 /*normal object outlook*/
 h1,h2,h3,h4,h5,h6{
@@ -122,8 +103,8 @@ h1.cbname{
 }
 div.hintbox{
     position:relative;
-    width:85%;
-    min-height:48px;
+    width:1028px;
+    min-height:32px;
     height:auto;
     margin:4px auto;
     border-style:solid;
@@ -135,7 +116,7 @@ div.hintbox{
 }
 div.categblock{
     position:relative;
-    width:100%;
+    width:1250-128px;
     min-height:128px;
     height:auto;
     margin:4px auto;
@@ -251,11 +232,6 @@ a.menuanchor{
     color:#333;
     text-decoration:none;
 }
-/*@media screen and (max-width:850px){
-    a.menuanchor{
-        font-size:20px;
-    }
-}*/
 a.menuanchor:hover{
     color:#44A !important;
     text-decoration:none;
