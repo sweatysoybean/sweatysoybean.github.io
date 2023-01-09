@@ -51,6 +51,16 @@ html,body{
     margin:8px auto;
     margin-left:266px;
 }
+@media screen and (max-width:950px){
+    #body{
+        margin-left:216px;
+    }
+}
+@media screen and (max-width:850px){
+    #body{
+        margin-left:166px;
+    }
+}
 @media screen and (max-width:600px){
     #body{
         width:100%;
@@ -74,6 +84,16 @@ html,body{
     -moz-user-select:none;
     -ms-user-select:none;
     user-select:none;
+}
+@media screen and (max-width:950px){
+    #sidebox{
+        width:200px;
+    }
+}
+@media screen and (max-width:850px){
+    #sidebox{
+        width:150px;
+    }
 }
 @media screen and (max-width:600px){
     #sidebox{
