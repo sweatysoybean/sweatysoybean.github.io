@@ -68,7 +68,7 @@ html,body{
         right:0;
         margin:0 auto;
         border-radius:0;
-        padding:16px;
+        padding:16px !important;
     }
 }
 #sidebox{
