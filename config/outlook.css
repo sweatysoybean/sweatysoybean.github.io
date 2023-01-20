@@ -44,6 +44,8 @@ html,body{
     position:relative;
     /*width:1250px;*/
     right:8px;
+    max-width:100%;
+    width:auto;
     background-color:#EEE;
     border-radius:4px;
     padding:64px;
