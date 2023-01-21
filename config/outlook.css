@@ -33,6 +33,7 @@ html,body{
     user-select:none;
 }
 #main{
+    position:relative;
     width:100%;
 }
 @media screen and (min-width:1520px){
@@ -68,6 +69,7 @@ html,body{
 }
 @media screen and (max-width:600px){
     #body{
+        position:absolute;
         width:100%;
         right:0;
         margin:0 auto;
