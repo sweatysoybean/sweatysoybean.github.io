@@ -133,12 +133,11 @@ h2:target{
 }
 #pagetitle{
     display:inline-block;
-    line-height:40px;
     padding:4px;
     text-indent:0;
     color:#FFF;
     font-weight:500;
-    font-family:"楷体";
+    font-family:"幼圆";
 }
 #menutitle{
     text-indent:16px;
