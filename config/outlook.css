@@ -4,7 +4,6 @@
     margin:0 auto;
     padding:0;
     box-sizing:border-box;
-    word-break:break-all;
 
 }
 html,body{
@@ -205,6 +204,7 @@ div.imgrside{
 }
 p{
     font-family:"微软雅黑";
+    word-break:break-all;
 }
 p.code,span.code{
     font-family:Consolas,Courier;
