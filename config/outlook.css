@@ -75,7 +75,7 @@ html,body{
 }
 @media screen and (max-width:850px){
     #body{
-        margin-left:116px;
+        margin-left:166px;
         padding:48px;
         padding-top:16px;
     }
@@ -199,6 +199,14 @@ img{
 #pagetitle{
     padding:5.5px;
     -webkit-user-drag:none;
+}
+@media screen and (max-width:600px){
+    #pagetitle{
+        display:none;
+    }
+}
+#homeimg{
+    padding:5.5px !important;
 }
 div.imglside{
     position:relative;
@@ -349,6 +357,35 @@ a.hblink{
 a.hblink:hover{
     background-color:#001E96;
     color:#FFF !important;
+}
+#hblhome{}
+@media screen and (max-width:600px){
+    #hblhome{
+        display:none;
+    }
+}
+a.hblbrwsfunc{
+    display:none;
+}
+@media screen and (max-width:600px){
+    a.hblbrwsfunc{
+        display:inline-block;
+    }
+}
+#imghome{
+    position:relative;
+    padding:0px;
+    margin:0;
+    max-width:100%;
+    width:auto;
+    max-height:100%;
+    height:auto;
+    display:none;
+}
+@media screen and (max-width:600px){
+    #imghome{
+        display:inline;
+    }
 }
 table{
     margin:4px auto;
