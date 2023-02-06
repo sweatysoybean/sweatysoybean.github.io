@@ -176,6 +176,9 @@ div.hintbox{
     background-color:#DDD;
     padding:16px;
 }
+div.hintbox h1{
+    text-indent:0;
+}
 @media screen and (max-width:600px){
     padding:8px;
 }

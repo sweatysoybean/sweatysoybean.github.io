@@ -1,0 +1,24 @@
+@charset "utf-8";
+#proclamation{
+    position:relative;
+    margin:8px auto;
+    width:80%;
+    min-height:200px;
+    border-style:solid hidden hidden hidden;
+    border-width:15px;
+    border-color:#002FA7;
+    background-color:#FFF;
+    padding:24px;
+}
+h1#pcmtitle{
+    margin:4px auto;
+}
+@media screen and (max-width:600px){
+    #proclamation{
+        min-height:160px;
+        padding:12px;
+    }
+}
+#log{
+    list-style-type:none;
+}
