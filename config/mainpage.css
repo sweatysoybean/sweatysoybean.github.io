@@ -12,6 +12,7 @@
 }
 h1#pcmtitle{
     margin:4px auto;
+    text-indent:0;
 }
 @media screen and (max-width:600px){
     #proclamation{

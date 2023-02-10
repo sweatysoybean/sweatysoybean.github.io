@@ -1,5 +1,10 @@
 @charset "utf-8";
 /*page main outlook*/
+:root{
+    /*Theme Settings*/
+    --theme-color:#002FA7;
+    --theme-bgcolor:#5987FF;/*#6190FF*/
+}
 *{
     margin:0 auto;
     padding:0;
@@ -12,7 +17,7 @@ html,body{
     width:100%;
     min-height:100%;
     height:auto;
-    background-color:#6190FF;
+    background-color:var(--theme-bgcolor);
 }
 @media screen and (max-width:600px){
     html,body{
@@ -33,7 +38,7 @@ html,body{
     top:0;
     bottom:8px;
     z-index:1;
-    background-color:#002FA7;
+    background-color:var(--theme-color);
     box-shadow:0px 8px 40px 2px rgba(0,0,0,0.5);
     overflow:hidden;
     -webkit-user-select:none;
@@ -57,7 +62,7 @@ html,body{
     width:auto;
     background-color:#EEE;
     border-radius:4px;
-    padding:64px;
+    padding:32px;
     padding-top:16px;
     float:left;
     margin:8px auto;
@@ -76,7 +81,7 @@ html,body{
 @media screen and (max-width:850px){
     #body{
         margin-left:166px;
-        padding:48px;
+        padding:12px;
         padding-top:16px;
     }
 }
@@ -87,7 +92,7 @@ html,body{
         right:0;
         margin:0 auto;
         border-radius:0;
-        padding:16px !important;
+        padding:8px !important;
     }
 }
 #sidebox{
@@ -123,7 +128,6 @@ html,body{
 }
 /*normal object outlook*/
 h1,h2,h3,h4,h5,h6{
-    text-indent:-32px;
     font-weight:555;
     font-family:"微软雅黑";
 }
@@ -157,7 +161,7 @@ h2:target{
 }
 h1.cbname{
     text-align:center;
-    background-color:#002FA7;
+    background-color:var(--theme-color);
     padding:4px;
     color:#FFF;
     border-radius:4px 4px 0 0;
@@ -176,7 +180,7 @@ div.hintbox{
     background-color:#DDD;
     padding:16px;
 }
-div.hintbox h1{
+div.hintbox p{
     text-indent:0;
 }
 @media screen and (max-width:600px){
@@ -223,6 +227,7 @@ div.imgrside{
 }
 p{
     font-family:"微软雅黑";
+    text-indent:32px;
     word-break:break-all;
 }
 p.code,span.code{
@@ -232,6 +237,7 @@ p.code,span.code{
     border-color:#CACACA;
     border-radius:5px;
     background-color:#DDD;
+    text-indent:0;
 }
 span.codestring{
     font-family:Consolas,Courier;
