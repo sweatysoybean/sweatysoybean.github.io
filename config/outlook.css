@@ -441,6 +441,9 @@ ul{
     padding-bottom:4px;
     list-style-type:disc;
 }
+li p{
+    text-indent:0;
+}
 dl{
     margin-bottom:8px;
 }
@@ -451,3 +454,8 @@ dt{
 /*dd{
     padding-left:24px;
 }*/
+summary{
+    outline:none !important;
+    font-size:32px;
+    font-weight:555;
+}
