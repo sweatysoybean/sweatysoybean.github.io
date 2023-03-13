@@ -275,8 +275,25 @@ p.hidden,span.hidden{
     font-style:italic;
     text-decoration:line-through;
 }
-p.cbtext{
-    text-indent:32px;
+p.quote{
+    margin-top:3px;
+    margin-bottom:3px;
+    border-style:hidden;
+    border-left-style:solid;
+    border-width:5px;
+    border-color:#CACACA;
+    background-color:#DDD;
+}
+p.quote::before{
+    font-size:32px;
+    font-weight:555;
+    color:#AAA;
+    content:"“";
+}
+p.quote::after{
+    font-weight:555;
+    color:#AAA;
+    content:"”";
 }
 @media screen and (max-width:600px){
     text-indent:8px;
