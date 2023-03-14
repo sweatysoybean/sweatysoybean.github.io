@@ -2,26 +2,27 @@ def forma(text,filename):
     text=text.replace("&","&amp;").replace("<","&lt;").replace(" ","&nbsp;")
     text="<p>"+text+"</p>"
     mark=["\n","（","）","<p>-hr</p>","-br",
-          "<p>||*","|*","*|","<p>||/","|/","/|","<p>||!","|!","!|","<p>||-x","|-x","x-|","<p>||\u005c","|\u005c","\u005c|",
+          "<p>||*","|*","*|","<p>||/","|/","/|","<p>||!","|!","!|","<p>||-x","|-x","x-|","<p>||\u005c","|\u005c","\u005c|","<p>||\"",
           "|_>",">_|",">_","|_v",
           "<p>||=1-","-=|","<p>||=2-","-=|","<p>||=3-","-=|","<p>||=4-","-=|","<p>||=5-","-=|","<p>||=6-","-=|",
           "<p>||=1","1=|</p>","<p>||=2","2=|</p>","<p>||=3","3=|</p>",
           "<p>||=4","4=|</p>","<p>||=5","5=|</p>","<p>||=6","6=|</p>",
           "<p>|[+</p>","<p>+]|</p>","<p>|[+-</p>","<p>|[-","-]|</p>","<p>|[.-","|[_:","|[:_","|[>","|>[","|[v","|v[","|[","]|",
           "-||","<p>|..-</p>","<p>-..|</p>","<p>|.-","-.|</p>"]
-    efunc=["</p>\n                    <p>",'<span class="explain">（','）</span>',"<hr />","<br />",
+    efunc=["</p>\n                    <p>",'<span class="explain">（','）</span>',"<hr />","<br />\n                    ",
            "<p class=\"caution\">","<span class=\"caution\">","</span>",
            "<p class=\"explain\">","<span class=\"explain\">","</span>",
            "<p class=\"warning\">","<span class=\"warning\">","</span>",
            "<p class=\"delete\">","<span class=\"delete\">","</span>",
            "<p class=\"hidden\">","<span class=\"hidden\">","</span>",
+           "<p class=\"quote\">",
            "<a href=\"","</a>","\">","<a class=\"downloadbutton\" href=\"",
            "<h1 id=\"","\">","<h2 id=\"","\">","<h3 id=\"","\">","<h4 id=\"","\">","<h5 id=\"","\">","<h6 id=\"","\">",
            "<h1>", "</h1>", "<h2>", "</h2>", "<h3>", "</h3>", "<h4>", "</h4>", "<h5>", "</h5>", "<h6>", "</h6>",
            "<table class=\"nrml\">","</table>","<table>","    <tr class=\"nrml\">","</tr>","    <tr>",
            "<td class=\"key\">","<td class=\"value\">","<td class=\"nrml\" colspan=\"","\">","<td class=\"nrml\" rowspan=\"",
            "\">","<td class=\"nrml\">","</td>","|","<ul>","</ul>","    <li>","</li>"]
-    for i in range(67):
+    for i in range(68):
         text=text.replace(mark[i],efunc[i])
     text=f"""<!DOCTYPE html>
 <html>
@@ -54,7 +55,7 @@ def forma(text,filename):
         </div>
     </body>
 </html>"""
-    file=open("../"+filename+".html",mode="w",encoding="UTF-8")
+    file=open("../"+filename+".html",mode="w",encoding="utf-8")
     file.write(text)
     return text
 
@@ -83,6 +84,7 @@ def main_io(gi):
 |-x[内容]x-|    --> <span class=\"delete\">[内容]</span>
 ||\\    --> （对该行使用hidden类样式，以流汗黄豆百科的形式）
 |\\[内容]\\|  --> <span class="hidden">[内容]</span>
+||" --> （对该行使用quote样式，以流汗黄豆百科的形式）
 ||=[等级][内容][等级]=|  --> <h[等级]>[内容]</h[等级]>（备注：等级为标题等级，最大为1最小为6）
 ||=[等级]-=|[目录索引][等级]=|  --> <h[等级] id="[目录索引]">
 |_>[链接]>_[文本]>_|    --> <a href="[链接]">[文本]</a>
