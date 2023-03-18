@@ -283,6 +283,8 @@ p.quote{
     border-width:5px;
     border-color:#CACACA;
     background-color:#DDD;
+    text-indent:-32px;
+    padding-left:32px;
 }
 p.quote::before{
     font-size:32px;
@@ -313,6 +315,9 @@ a:hover{
 }
 a:visited{
     color:#00F;
+}
+#body > a{
+    padding-left:32px;
 }
 a.sblink{
     color:#000;
@@ -463,16 +468,20 @@ li p{
 }
 dl{
     margin-bottom:8px;
+    padding:16px;
+    padding-top:4px;
+    padding-bottom:4px;
 }
 dt{
     display:list-item;
     font-weight:555;
 }
-/*dd{
+dt::marker{
+    padding-left:16px;
+}
+dd{
     padding-left:24px;
-}*/
+}
 summary{
     outline:none !important;
-    font-size:32px;
-    font-weight:555;
 }

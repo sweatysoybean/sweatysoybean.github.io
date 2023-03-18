@@ -23,3 +23,7 @@ h1#pcmtitle{
 #log{
     list-style-type:none;
 }
+#logtitle{
+    font-size:32px;
+    font-weight:555;
+}
