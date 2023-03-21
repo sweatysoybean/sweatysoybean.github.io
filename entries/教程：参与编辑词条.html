@@ -4,15 +4,15 @@
         <meta charset="UTF-8" />
         <title>教程：参与编辑词条</title>
         <meta name="viewport" content="width=device-width, user-scalable=no" />
-        <link rel="icon" href="assets/site-icon.ico" />
+        <link rel="icon" href="../assets/site-icon.ico" />
         <link rel="stylesheet" type="text/css" href="../config/outlook.css" />
     </head>
     <body>
         <div id="container">
             <div id="head">
-                <img id="pagetitle" src="assets/pagetitle.png" />
-                <a id="imghome" href=""><img id="homeimg" src="assets/pagetitle.png" /></a>
-                <a id="hblhome" class="hblink" href="">首页</a>
+                <img id="pagetitle" src="../assets/pagetitle.png" />
+                <a id="imghome" href=""><img id="homeimg" src="../assets/pagetitle.png" /></a>
+                <a id="hblhome" class="hblink" href="../">首页</a>
                 <a class="hblink hblbrwsfunc" href="">刷新</a>
                 <a class="hblink hblbrwsfunc" href="#">回到顶部</a>
             </div>
@@ -22,13 +22,16 @@
                     <a class="sblink" href="#">回到顶部</a>
                     <hr />
                     <h6 id="menutitle">目录 MENU</h6>
-                    <ol>
+                    <ol id="menu">
                         <li><a class="menuanchor" href="#线下类">线下类</a></li>
                         <ul>
                             <li><a class="menuanchor" href="#纸质文档">纸质文档</a></li>
                             <li><a class="menuanchor" href="#纸质文稿">纸质文稿</a></li>
                         </ul>
                         <li><a class="menuanchor" href="#线上类">线上类</a></li>
+                        <ul>
+                            <li><a class="menuanchor" href="文本文档文件">文本文档文件</a></li>
+                        </ul>
                     </ol>
                 </div>
                 <div id="body">
@@ -60,9 +63,32 @@
                     <p>从线下类的两种参与方式开始讲起：</p>
                     <h2 id="纸质文档">纸质文档</h2>
                     <p class="caution">纸质文档，精准度较高的纸质文稿文档。</p>
-                    <p>要求：矩形白纸</p>
+                    <p>在词条所需要具备的要求的基础上，纸质文档需要的要求：</p>
+                    <ul>
+                        <li>纸张大小足够，不能为小纸条大小；</li>
+                        <li>文本可以阅读，不能出现电脑上没有的字（以UTF-8编码为准）；</li>
+                        <li>尽量的保证语句通顺以及内容的精准（虽然不支持太多错别字，但是不小心出现几个只要不影响纠正没有问题），本人会尽量按照原文录入；</li>
+                    </ul>
+                    <p>关于提交：于线下递交至作者即可。尽量在上学时的课间或放学时递交。</p>
                     <h2 id="纸质文稿">纸质文稿</h2>
+                    <p class="caution">纸质文稿，相对于纸质文档自由度更高难度更低的文稿文档。</p>
+                    <p>在词条要求的基础上，纸质文稿的要求：</p>
+                    <ul>
+                        <li>对纸张没有太多的要求。不过一个小纸条恐怕不能承载一个词条的信息量；</li>
+                        <li>文本至少能阅读。不要自创字即可，错别字不影响我理解也可，电脑上没有的文字还是可以的；</li>
+                        <li>语句内容上你需要保证你能把该表达的内容都表达出来，只要能保证不影响表达意思简写一点点没问题。不过最好还是让文字内容精准点，我相信你也不会想你的内容被更改太多；<span class="explain">分离出来文稿，与文档在用字上的不同不算很大，实际上只是相对来说更加容错一点点。</span></li>
+                    </ul>
+                    <p>提交方式同纸质文档。</p>
                     <h1 id="线上类">线上类</h1>
+                    <p>然后是线上的三个方式：</p>
+                    <h2 id="文本文档文件">文本文档文件</h2>
+                    <p class="caution">文本文档文件，只存储文本的纯文本文件。</p>
+                    <p>使用文本文档文件时，在原有的词条的要求上，要求：</p>
+                    <ul>
+                        <li>编码最好是UTF-8！最好带BOM；<span class="explain">有些电脑小白可能不太懂这一条是什么意思，你可以去网上搜索。以Windows记事本为例，先点 文件 → 另存为，在弹出来的页面最下面，“保存”旁边有一个框框，里面就是编码选项，打开它在里面选择UTF-8即可。</span></li>
+                        <li>跟纸质文档一样，尽量的保证语句通顺以及内容的精准，这次本人会使用程序按照原文生成词条（本人可以在生成前检查需要修改的地方，不用担心谬误被保留并公之于众）；</li>
+                    </ul>
+                    <p>提交方式：最好是通过QQ聊天。此外你可以选择使用微信或者QQ邮箱。</p>
                 </div>
             </div>
         </div>

@@ -141,9 +141,12 @@ h2:target{
     text-indent:16px;
 }
 #menu{
-    padding:32px;
+    /*padding:32px;*/
     padding-top:4px;
     padding-bottom:4px;
+}
+#menu li::marker{
+    text-indent:32px !important;
 }
 #contenttitle{
     font-weight:500;
