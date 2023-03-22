@@ -361,6 +361,11 @@ a.downloadbutton:visited{
     color:#000 !important;
     text-decoration:underline
 }
+a.downloadbutton::before{
+    font-weight:555;
+    color:#AAA;
+    content:"↓";
+}
 a.hblink{
     display:inline-block;
     height:100%;
