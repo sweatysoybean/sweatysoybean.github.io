@@ -328,6 +328,7 @@ a.sblink{
     padding:16px;
     text-decoration:none;
     display:block;
+    transition:background-color 0.1s linear;
 }
 a.sblink:hover{
     background-color:#E2E2E2;
@@ -376,6 +377,8 @@ a.hblink{
     text-align:center;
     float:right;
     color:#FFF;
+    background-color:var(--theme-color);
+    transition:background-color 0.1s linear;
     text-decoration:none;
 }
 @media screen and (max-width:600px){
