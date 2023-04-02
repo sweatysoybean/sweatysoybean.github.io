@@ -65,6 +65,10 @@ float:left;
 border-style:solid;
 border-width:3px;
 border-color:var(--theme-color);
+font-size:18px;
+}
+input:placeholder-shown{
+font-style:italic;
 }
 input:focus{
 outline:none;
