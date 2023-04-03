@@ -9,6 +9,7 @@
         <link rel="icon" href="assets/site-icon.ico" />
         <link rel="stylesheet" type="text/css" href="config/outlook.css" />
         <link rel="stylesheet" type="text/css" href="config/mainpage.css" />
+        <script src="config/function.js"></script>
     </head>
     <body>
         <div id="container">
@@ -16,10 +17,8 @@
                 <img id="pagetitle" src="assets/pagetitle.png" />
                 <a id="imghome" href=""><img id="homeimg" src="assets/pagetitle.png" /></a>
                 <div id="searchbox">
-                    <form>
-                        <input placeholder="搜索什么……" />
-                        <button type="submit">搜索</button>
-                    </form>
+                    <input id="search" placeholder="搜索什么……" />
+                    <button onclick="skip();">搜索</button>
                 </div>
                 <a id="hblhome" class="hblink" href="">首页</a>
                 <a class="hblink hblbrwsfunc" href="">刷新</a>
@@ -34,8 +33,8 @@
                     <h1 id="contenttitle">主页</h1>
                     <div id="proclamation">
                         <h1 id="pcmtitle">公告栏</h1>
-                        <p class="warning">现在的搜索框还没有任何用处，不能用于搜索！</p>
-                        <p class="caution">本人现在只是在测试它的布局，还没有添加功能，点击搜索什么也不会发生。</p>
+                        <p class="warning">热烈庆祝流汗黄豆百科拥有搜索功能，并第一次使用JavaScript！</p>
+                        <p class="caution">不过现在还在测试是否有效。</p>
                         <hr />
                         <p class="caution">擅自闯入流汗黄豆百科，给你们都记个C！</p>
                         <p>直至目前仍有比较多的词条没有编写完成，有意者可以尝试联系作者参与编写。</p>
@@ -64,7 +63,7 @@
                     <div class="categblock">
                         <h1 class="cbname">教程类词条</h1>
                         <p>所有教程，即教程类词条归类在此处。</p>
-                        <p><a href="entries/教程：制作词条">制作词条（本词条或将废弃）</a> <a href="entries/教程：参与编辑词条">参与编辑词条</a></p>
+                        <p><a href="entries/教程：参与编辑词条">参与编辑词条</a></p>
                     </div>
                     <div class="categblock">
                         <h1 class="cbname">讨伐文</h1>
@@ -81,6 +80,13 @@
                         <p>普通的编辑词条（包括但不限于编辑主页文本、为词条添加文件以及更改这些文件、编辑教程等）不会记录。</p>
                         <p>某一次特殊的为词条改名事件没有记录。</p>
                         <ul id="log">
+                            <li>
+                                <p class="code">2023/4/3</p>
+                                <ul>
+                                    <li>不出意外的话，现在搜索框可以进行搜索了，可用于搜索词条。这也是本人第一次在流汗黄豆百科中使用JS。</li>
+                                    <li>删除了教程“教程：制作词条”。</li>
+                                </ul>
+                            </li>
                             <li>
                                 <p class="code">2023/4/2</p>
                                 <ul>
@@ -379,15 +385,16 @@
                     <h1>关于</h1>
                     <p class="caution">如果你也有些词条或者教程的兴趣，可以试试看<a href="entries/教程：制作词条">教程：参与编辑词条</a></p>
                     <p><span class="caution">流汗黄豆百科</span>是一个极其精简的类似于百科站或者是wiki的静态网站。当然也可以用来写一些其他的。</p>
-                    <p>本站通过慷慨的Github实现。Github可以帮你实现不花钱买域名和服务器地建造一个可以通过网络访问的静态网站。<span class="delete">当然你要相信这不是广告。</span></p>
+                    <p>本站通过慷慨的Github实现。Github的Github Pages功能可以帮你实现不花钱买域名和服务器地建造一个可以通过网络访问的静态网站。<span class="delete">当然你要相信这不是广告。</span></p>
                     <p>如果你有建议，有想说的，各种方面的只要是正常的建议都可以“骚扰”一个人<span class="delete">（你知道是谁的，对吧？）</span>。</p>
-                    <p>整个网站都只有用到HTML和CSS<span class="delete">（因为没必要）</span><span class="hidden">，安全纯净</span>。</p>
+                    <p class="caution">在4月3日之前，这个网站上是没有JS的，但2023年4月3日，流汗黄豆百科拥有了第一个JS脚本！</p>
                     <div class="hintbox">
                         <h1 style="text-indent:0">扩展知识</h1>
                         <p>因为HTML只是“超文本标记语言”，只用于编写出网页内容，需要处理数据以及动态内容等就会涉及到JavaScript、PHP等。</p>
                         <p>像广告推送、账户系统/登录注册、分析表单、在网页中编辑文档、动态内容、数据读写等就不归HTML管了。</p>
                         <p>CSS只是决定外观样式的东西，跟上面那些没什么关系。</p>
                     </div>
+                    <hr />
                     <p class="caution">声明：流汗黄豆百科是一个娱乐性质的非商用网站，制作者九年义务教育还没有结束。</p>
                 </div>
             </div>

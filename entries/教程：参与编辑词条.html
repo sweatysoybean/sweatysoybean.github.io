@@ -1,17 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
     <head>
         <meta charset="UTF-8" />
         <title>教程：参与编辑词条</title>
         <meta name="viewport" content="width=device-width, user-scalable=no" />
         <link rel="icon" href="../assets/site-icon.ico" />
-        <link rel="stylesheet" type="text/css" href="../config/outlook.css" />
+        <link rel="stylesheet" href="../config/outlook.css" />
+        <script src="../config/function.js"></script>
     </head>
     <body>
         <div id="container">
             <div id="head">
                 <img id="pagetitle" src="../assets/pagetitle.png" />
                 <a id="imghome" href="../"><img id="homeimg" src="../assets/pagetitle.png" /></a>
+                <div id="searchbox">
+                    <input id="search" placeholder="搜索什么……" />
+                    <button onclick="skip();">搜索</button>
+                </div>
                 <a id="hblhome" class="hblink" href="../">首页</a>
                 <a class="hblink hblbrwsfunc" href="">刷新</a>
                 <a class="hblink hblbrwsfunc" href="#">回到顶部</a>

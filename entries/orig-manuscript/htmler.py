@@ -25,19 +25,24 @@ def forma(text,filename):
     for i in range(68):
         text=text.replace(mark[i],efunc[i])
     text=f"""<!DOCTYPE html>
-<html>
+<html lang="zh-CN">
     <head>
         <meta charset="UTF-8" />
         <title>{filename}</title>
         <meta name="viewport" content="width=device-width, user-scalable=no" />
         <link rel="icon" href="../assets/site-icon.ico" />
         <link rel="stylesheet" href="../config/outlook.css" />
+        <script src="../config/function.js"></script>
     </head>
     <body>
         <div id="container">
             <div id="head">
                 <img id="pagetitle" src="../assets/pagetitle.png" />
                 <a id="imghome" href="../"><img id="homeimg" src="../assets/pagetitle.png" /></a>
+                <div id="searchbox">
+                    <input id="search" placeholder="搜索什么……" />
+                    <button onclick="skip();">搜索</button>
+                </div>
                 <a id="hblhome" class="hblink" href="../">首页</a>
                 <a class="hblink hblbrwsfunc" href="">刷新</a>
                 <a class="hblink hblbrwsfunc" href="#">回到顶部</a>
@@ -71,6 +76,7 @@ def main_io(gi):
 以下内容出现在文中会被转换成对应的形式。
 任何独立的一行内的内容在其所在的那一行上面都不应该出现任何其他的内容。
 拥有一定的Python&HTML知识也许能帮你更好地理解下面的列表。不过有些内容还是可能让你感到疑惑。
+下表内容有可能不全。
 （[内容]）  --> <span class=\"explain\">（[内容]）</span>
 -hr --> <hr />  （备注：此内容必须在独立的一行内，并且不能在文章末尾。）
 -br --> <br />
