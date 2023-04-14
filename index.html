@@ -10,6 +10,8 @@
         <link rel="stylesheet" type="text/css" href="config/outlook.css" />
         <link rel="stylesheet" type="text/css" href="config/mainpage.css" />
         <script src="config/function.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+        <script src="config/erw.js"></script>
     </head>
     <body>
         <div id="container">
@@ -59,28 +61,34 @@
                     <div class="categblock">
                         <h1 class="cbname">人物类词条</h1>
                         <p>人物类百科主要是人物类词条，包括现实人物、虚拟人物以及网络人物。</p>
-                        <p><a href="entries/刘PY">刘PY</a>&nbsp;<a href="entries/PY">PY</a> <a href="entries/欧皮燕子学姐">欧皮燕子学姐</a> <a href="entries/菜PY">菜PY</a></p>
+                        <p id="esc-person"></p>
                     </div>
                     <div class="categblock">
                         <h1 class="cbname">教程类词条</h1>
                         <p>所有教程，即教程类词条归类在此处。</p>
-                        <p><a href="entries/教程：参与编辑词条">参与编辑词条</a></p>
+                        <p id="esc-tutorial"></p>
                     </div>
                     <div class="categblock">
                         <h1 class="cbname">讨伐文</h1>
                         <p>所有讨伐文批判文集结于此处。</p>
-                        <p><a href="entries/夜访米米蛆">夜访米米蛆</a> <a href="entries/幼稚的过往">幼稚的过往</a> <a href="entries/扁头">扁头</a> <a href="entries/讨伐文集：形式主义万岁">讨伐文集：形式主义万岁</a></p>
+                        <p id="esc-critical"></p>
                     </div>
                     <div class="categblock">
                         <h1 class="cbname">其他</h1>
                         <p>不知道能分到哪个类别的词条都在这儿。</p>
-                        <p><a href="entries/部件展示">部件展示</a> <a href="proto-se/">远古版本体验</a></p>
+                        <p id="esc-other"></p>
                     </div>
                     <details>
                         <summary id="logtitle">更新日志</summary>
                         <p>普通的编辑词条（包括但不限于编辑主页文本、为词条添加文件以及更改这些文件、编辑教程等）不会记录。</p>
                         <p>某一次特殊的为词条改名事件没有记录。</p>
                         <ul id="log">
+                            <li>
+                                <p class="code">2023/4/14</p>
+                                <ul>
+                                    <li>现在的词条列表是会自动读取数据而不需要本人手动更改内容了。</li>
+                                </ul>
+                            </li>
                             <li>
                                 <p class="code">2023/4/4</p>
                                 <ul>
