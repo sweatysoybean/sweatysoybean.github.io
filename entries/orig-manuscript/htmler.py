@@ -17,7 +17,7 @@ def forma(text,filename):
            "<p class=\"hidden\">","<span class=\"hidden\">","</span>",
            "<p class=\"quote\">",
            "<a href=\"","</a>","\">","<a class=\"downloadbutton\" href=\"",
-           "<h1 id=\"","\">","<h2 id=\"","\">","<h3 id=\"","\">","<h4 id=\"","\">","<h5 id=\"","\">","<h6 id=\"","\">",
+           '<h1 id="','">',"<h2 id=\"","\">","<h3 id=\"","\">","<h4 id=\"","\">","<h5 id=\"","\">","<h6 id=\"","\">",
            "<h1>", "</h1>", "<h2>", "</h2>", "<h3>", "</h3>", "<h4>", "</h4>", "<h5>", "</h5>", "<h6>", "</h6>",
            "<table class=\"nrml\">","</table>","<table>","    <tr class=\"nrml\">","</tr>","    <tr>",
            "<td class=\"key\">","<td class=\"value\">","<td class=\"nrml\" colspan=\"","\">","<td class=\"nrml\" rowspan=\"",
