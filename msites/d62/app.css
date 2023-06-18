@@ -1,0 +1,159 @@
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+@media screen and (prefers-color-scheme:dark){
+html,body{
+background-color:#202020;
+}
+}
+#head{
+position:sticky;
+margin-bottom:64px;
+width:100%;
+height:48px;
+background-color:#033E84;
+box-shadow:0px 12px 10px rgba(0,0,0,0.3);
+}
+@media screen and (prefers-color-scheme:dark){
+#head{
+background-color:#2f2f2f;
+}
+}
+#pagetitle{
+margin-left:0;
+padding-left:16px;
+font-family:Tahoma,sans-serif;
+font-weight:500;
+color:#FFF;
+text-decoration:none;
+transition:none;
+}
+#pagetitle:hover{
+margin-bottom:0;
+padding-top:0;
+text-indent:0;
+font-size:32px;
+}
+#search{
+margin:0 auto;
+width:50%;
+height:64px;
+margin-bottom:100px;
+padding-top:16px;
+padding-bottom:16px;
+}
+#input{
+display:inline-block
+position:relative;
+width:70%;
+height:48px;
+padding-left:24px;
+border-style:solid;
+border-right-style:none;
+border-color:#BBB;
+border-top-left-radius:24px;
+border-bottom-left-radius:24px;
+box-shadow:6px 8px 6px rgba(0,0,0,0.2);
+}
+@media screen and (prefers-color-scheme:dark){
+#input{
+background-color:#333;
+border-color:#444;
+}
+}
+#input:focus-visible{
+outline:none;
+}
+#input:placeholder-shown{
+font-style:italic;
+}
+#search button{
+display:inline-block;
+position:relative;
+float:right;
+width:30%;
+height:48px;
+border-style:solid;
+border-left-style:none;
+border-color:#BBB;
+border-top-right-radius:24px;
+border-bottom-right-radius:24px;
+background-color:#FFF;
+box-shadow:6px 8px 6px rgba(0,0,0,0.2);
+transition:background-color 0.1s ease;
+}
+@media screen and (prefers-color-scheme:dark){
+background-color:#333;
+border-color:#444;
+}
+#search button:hover{
+background-color:#EEE;
+}
+h1{
+font-family:"等线 Light";
+margin-bottom:32px;
+margin-left:10%;
+padding-top:0;
+font-size:32px;
+text-decoration:underline;
+text-decoration-color:#033E84;
+text-underline-position:under;
+text-indent:0;
+transition: margin-bottom 0.5s ease,
+            padding-top 0.5s ease,
+            text-indent 0.5s ease,
+            font-size 0.5s ease;
+}
+@media screen and (prefers-color-scheme:dark){
+h1{
+color:#fff;
+}
+}
+h1:hover{
+margin-bottom:64px;
+padding-top:16px;
+text-indent:32px;
+font-size:36px;
+}
+h2{
+font-family:"等线 Light";
+margin-bottom:24px;
+margin-left:12%;
+padding-top:0;
+font-size:24px;
+text-decoration:underline;
+text-decoration-color:#033E84;
+text-underline-position:under;
+text-indent:0;
+transition: margin-bottom 0.5s ease,
+            padding-top 0.5s ease,
+            text-indent 0.5s ease,
+            font-size 0.5s ease;
+}
+@media screen and (prefers-color-scheme:dark){
+h2{
+color:#fff;
+}
+}
+h2:hover{
+text-indent:12px;
+font-size:28px;
+}
+p{
+text-indent:20%;
+}
+@media screen and (prefers-color-scheme:dark){
+p{
+color:#fff;
+}
+}
+ul{
+padding-left:20%;
+}
+@media screen and (prefers-color-scheme:dark){
+li{
+color:#fff;
+}
+}
