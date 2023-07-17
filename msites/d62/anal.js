@@ -15,18 +15,18 @@ function searchD62(jd){
         document.getElementById("cmd-name").innerHTML+=getsData.name;
         document.getElementById("cmd-age").innerHTML+=cmDatas.basicInformation.age;
         document.getElementById("cmd-birth").innerHTML+=cmDatas.basicInformation.birth;
-        switch(cmDatas.basicInformation.sex){
+        switch(cmDatas.basicInformation.gender){
             case "male":
-                document.getElementById("cmd-sex").innerHTML+="公的";
+                document.getElementById("cmd-gender").innerHTML+="公的";
                 break;
             case "female":
-                document.getElementById("cmd-sex").innerHTML+="母的";
+                document.getElementById("cmd-gender").innerHTML+="母的";
                 break;
             case "unknown":
-                document.getElementById("cmd-sex").innerHTML+="未知";
+                document.getElementById("cmd-gender").innerHTML+="未知";
                 break;
             case "py":
-                document.getElementById("cmd-sex").innerHTML+="蒲源特有的性别";
+                document.getElementById("cmd-gender").innerHTML+="蒲源特有的性别";
                 break;
         }
 
