@@ -61,6 +61,7 @@ box-shadow:6px 8px 6px rgba(0,0,0,0.2);
 #input{
 background-color:#333;
 border-color:#444;
+color:#FFF;
 }
 }
 #input:focus-visible{
@@ -84,12 +85,19 @@ background-color:#FFF;
 box-shadow:6px 8px 6px rgba(0,0,0,0.2);
 transition:background-color 0.1s ease;
 }
-@media screen and (prefers-color-scheme:dark){
-background-color:#333;
-border-color:#444;
-}
 #search button:hover{
 background-color:#EEE;
+}
+@media screen and (prefers-color-scheme:dark){
+#search button{
+background-color:#333;
+border-color:#444;
+color:#fff;
+}
+#search button:hover{
+background-color:#222;
+color:#EEE;
+}
 }
 h1{
 font-family:"等线 Light";

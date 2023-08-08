@@ -3,7 +3,7 @@
     "basicInformation": {
       "age": "12",
       "birth": "2010-10-20",
-      "sex": "male"
+      "gender": "male"
     },
     "datasPerYear": {
       "2017 11": "加入一（2）班",
