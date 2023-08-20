@@ -6,6 +6,9 @@ box-sizing:border-box;
 user-select:none;
 }
 :root{
+--container-bgcolor:rgba(249,249,249,0.6);
+--link-bgcolor:#FFF;
+--link-hover-bgcolor:#EEE;
 /*
 --theme-image:url("aqua.jpg");
 --theme-color:rgb(0,146,239);
@@ -16,16 +19,29 @@ user-select:none;
 --theme-color:#696000;
 --theme-hover-color:#111;
 */
-
+/*
 --theme-image:url("bliss.jpg");
 --theme-color:#08F;
 --theme-hover-color:#07E;
-
+*/
 /*
 --theme-image:url("pinksunset.jpg");
 --theme-color:#F2F;
 --theme-hover-color:#E1E;
 */
+/*
+--theme-image:url("https://nestflix.fun/img/das-ist-gut-thumb-1200w.jpg");
+--theme-color:#C03C49;
+--theme-hover-color:#451418;
+*/
+
+--theme-image:url("victoria_harbor.jpg");
+--theme-color:#3A8DD1;
+--theme-hover-color:#195593;
+--container-bgcolor:rgba(0,0,0,0);
+--link-bgcolor:rgba(255,255,255,0.2);
+--link-hover-bgcolor:rgba(255,255,255,0.3);
+
 }
 ::-webkit-scrollbar{
 display:none;
@@ -33,12 +49,13 @@ display:none;
 html,body{
 /*background-color:#EEE;*/
 background-image:var(--theme-image);
+background-size:cover;
 }
 #container{
 margin:0 auto;
 padding:4px;
 width:60%;
-background-color:rgba(249,249,249,0.6);/*#F9F9F9*/
+background-color:var(--container-color);
 border-radius:5px;
 box-shadow:0px 8px 40px 2px rgba(0,0,0,0.1);
 backdrop-filter:blur(10px);
@@ -134,12 +151,13 @@ font-size:24px;
 font-weight:555;
 color:#000;
 text-decoration:none;
-background-color:#FFF;
+background-color:var(--link-bgcolor);
+backdrop-filter:blur(100px);
 transition:background-color 0.1s linear;
 -webkit-transition:background-color 0.1s linear;
 -moz-transition:background-color 0.1s linear;
 -o-transition:background-color 0.1s linear;
 }
 a:hover{
-background-color:#EEE;
+background-color:var(--link-hover-bgcolor);
 }
