@@ -20,7 +20,7 @@ var escCritical=document.getElementById("esc-critical");
 var escOther=document.getElementById("esc-other");
 var sorry="私密马赛！程序不知道出了什么问题，词条列表加载不出来力！麻烦您高抬贵手，试试搜索功能，或者刷新亿下？<a href=\"#\">点我暴击狸屑V</a>";
 try{
-    $.getJSON("config/entries.json",raW);
+    $.getJSON("https://sweatysoybean.github.io/config/entries.json",raW);
 }
 catch(err){
     escPerson.innerHTML+=sorry;
