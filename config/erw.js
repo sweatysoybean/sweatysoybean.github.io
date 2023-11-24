@@ -18,7 +18,7 @@ var escPerson=document.getElementById("esc-person");
 var escTutorial=document.getElementById("esc-tutorial");
 var escCritical=document.getElementById("esc-critical");
 var escOther=document.getElementById("esc-other");
-var sorry="真是抱歉了捏，因为某些原因词条列表加载不出来了捏，都怪作者手欠把词条列表改成了用程序加载的方式捏，真是对不住了捏，这边建议宁去用搜索捏，搜索也可以搜索到捏~";
+var sorry="私密马赛！程序不知道出了什么问题，词条列表加载不出来力！麻烦您高抬贵手，试试搜索功能，或者刷新亿下？<a href=\"#\">点我暴击狸屑V</a>";
 try{
     $.getJSON("config/entries.json",raW);
 }

@@ -1,16 +1,35 @@
 {
   "程梓岩": {
     "basicInformation": {
-      "age": "12",
+      "age": "13",
       "birth": "2010-10-20",
       "gender": "male"
     },
     "datasPerYear": {
       "2017 11": "加入一（2）班",
-      "2023 62": "成为班长"
+      "2023 62": "成为班长",
+      "2023 71": "离开中科实验，去到深圳实验"
     },
     "contactInformation": {
       "qq": "1558069051"
+    }
+  },
+  "李学为": {
+    "basicInformation": {
+      "age": "12",
+      "birth": "2011-02-08",
+      "gender": "male"
+    },
+    "datasPerYear": {
+      "2017 11": "加入一（2）班",
+      "2023 71": "升入初中，加入七（3）班"
+    },
+    "contactInformation": {
+      "qq": "1285314876",
+      "邮箱": "1285314876@qq.com",
+      "微信": "wxid4843wozaizuosi",
+      "抖音": "p6s2y9c0h8o1",
+      "GitHub": "@sweatysoybean"
     }
   }
 }
