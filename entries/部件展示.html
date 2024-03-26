@@ -6,7 +6,9 @@
         <meta name="viewport" content="width=device-width, user-scalable=no" />
         <link rel="icon" href="../assets/site-icon.ico" />
         <link rel="stylesheet" type="text/css" href="../config/outlook.css" />
+        <link rel="stylesheet" type="text/css" href="../config/musictagplayer.css" />
         <script src="../config/function.js"></script>
+        <script src="../config/musictagplayer.js"></script>
     </head>
     <body>
         <div id="container">
@@ -42,8 +44,8 @@
                         <p>页首提示框测试</p>
                     </div>
                     <p>基本信息表格测试</p>
-                    <p class="explain">内容是作者的某一次使用不同设备打开的测试记录</p>
-                    <table>
+                    <p class="explain">下面是一段粗略地址信息</p>
+                    <!--table>
                         <tr>
                             <td class="key">测试者</td><td class="value">制作者本人</td>
                             <td class="key">使用浏览器</td><td class="value">华为自带浏览器</td>
@@ -55,6 +57,15 @@
                         <tr>
                             <td class="key">是否打开</td><td class="value">是</td>
                             <td class="key">问题</td><td class="value">缺少字体；大小太小（已全部解决）</td>
+                        </tr>
+                    </table-->
+                    <table>
+                        <tr>
+                            <td class="key">省级行政区</td><td class="value">广东省</td>
+                            <td class="key">市级行政区</td><td class="value">深圳市</td>
+                        </tr>
+                        <tr>
+                            <td class="key">县/区</td><td class="value">南山区</td>
                         </tr>
                     </table>
                     <h1>一级标题测试</h1>
@@ -79,7 +90,7 @@
                         &nbsp;&nbsp;&nbsp;&nbsp;border-color:#CACACA;<br>
                         &nbsp;&nbsp;&nbsp;&nbsp;border-radius:<span class="codeint">5</span>px;<br>
                         &nbsp;&nbsp;&nbsp;&nbsp;background-color:#DDD;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;text-indent:<span class="codeint">0</span>;
+                        &nbsp;&nbsp;&nbsp;&nbsp;text-indent:<span class="codeint">0</span>;<br>
                         }
                     </p>
                     <a href="#">超链接测试</a><br />
@@ -100,20 +111,21 @@
                     </ul>
                     <p>列表嵌套测试</p>
                     <ol>
-                        <li>Ahora Vamos por todo</li>
-                        <li>Te acompa a la suerte</li>
+                        <li>Engine x Start!! (melody mix)</li>
+                        <li>FULi AUTO SHOOTER</li>
                         <ul>
-                            <li>Tsamina mina zangalewa</li>
-                            <li>Porque esto es africa</li>
+                            <li>Non-Melodic Ragez (MUG Edit)</li>
+                            <li>ENERGY SYNERGY MATRIX</li>
                         </ul>
                         <ol>
-                            <li>Tsamina mina eh eh</li>
+                            <li>Spasmodic</li>
                             <ul>
-                                <li>Waka waka eh eh</li>
+                                <li>Igallta</li>
                             </ul>
-                            <li>Tsamina mina zangalewa</li>
+                            <li>Rrhar'il</li>
                         </ol>
-                        <li>Porque esto es africa</li>
+                        <li>DESTRUCTION 3,2,1</li>
+                        <li>Distorted Fate</li>
                     </ol>
                     <p>定义列表测试</p>
                     <p>本站主要文件夹及其用途。</p>
@@ -126,6 +138,10 @@
                         <dd>存放词条文件和词条所需资源（每个词条的所需资源都会放在一个单独的文件夹里）。</dd>
                         <dt>proto-se/</dt>
                         <dd>存放远古版本的文件夹。</dd>
+                        <dt>hex-mp/</dt>
+                        <dd>作者本人的浏览器主页存放地。</dd>
+                        <dt>msites/</dt>
+                        <dd><a href="../msites/">mSites</a>项目文件夹。</dd>
                     </dl>
                     <p>内容分类块测试</p>
                     <div class="categblock">
@@ -166,6 +182,18 @@
                             <td class="nrml">30</td><td class="nrml">31</td><td class="nrml">1</td><td class="nrml">2</td><td class="nrml">3</td><td class="nrml">4</td><td class="nrml">5</td>
                         </tr>
                     </table>
+                    <div class="smmpc">
+                        <div class="cover"></div>
+                            <div class="iacm">
+                                <div class="iaci">
+                                    <p>Rrhar'il - Team Grimoire</p>
+                                </div>
+                                <div class="iacc">
+                                    <script>music=new Audio('部件展示.src/Rrharil.mp3')</script>
+                                    <a href="javascript:play();" id="player">▶</a>
+                                </div>
+                            </div>
+                    </div>
                 </div>
             </div>
         </div>

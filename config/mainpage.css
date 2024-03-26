@@ -26,3 +26,37 @@ h1#pcmtitle{
 #logtitle{
     font-size:32px;
 }
+#msites{
+    display:block;
+    position:relative;
+    width:100%;
+    min-height:64px;
+    height:auto;
+    margin:4px auto;
+    margin-top:16px;
+    background-color:#333;
+    border-radius:4px;
+    border-bottom-style:solid;
+    border-bottom-color:#FFF !important;
+    border-bottom-width:64px !important;
+    font-size:48px;
+    font-family:"Consolas","Courier";
+    color:#FFF;
+    text-decoration:none;
+}
+#msites:hover{
+    color:#FFF !important;
+    text-decoration:none;
+}
+#msites:visited{
+    color:#FFF !important;
+    text-decoration:none;
+}
+#randompage-title::before{
+    content:"? ";
+    color:#0045F4;
+}
+#randompage-title::after{
+    content:" ?";
+    color:#0045F4;
+}
