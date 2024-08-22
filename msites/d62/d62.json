@@ -1,5 +1,5 @@
 {
-  "程梓岩": {
+  "程ZY": {
     "basicInformation": {
       "age": "13",
       "birth": "2010-10-20",
@@ -7,16 +7,15 @@
     },
     "datasPerYear": {
       "2017 11": "加入一（2）班",
-      "2023 62": "成为班长",
-      "2023 71": "离开中科实验，去到深圳实验"
+      "2023 62": "成为班长"
     },
     "contactInformation": {
       "qq": "1558069051"
     }
   },
-  "李学为": {
+  "李XW": {
     "basicInformation": {
-      "age": "12",
+      "age": "13",
       "birth": "2011-02-08",
       "gender": "male"
     },
@@ -28,8 +27,7 @@
       "qq": "1285314876",
       "邮箱": "1285314876@qq.com",
       "微信": "wxid4843wozaizuosi",
-      "抖音": "p6s2y9c0h8o1",
-      "GitHub": "@sweatysoybean"
+      "Bilibili": "@-pgEON鸽子公主-"
     }
   }
 }
