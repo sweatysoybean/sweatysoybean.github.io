@@ -1,12 +1,3 @@
-/*function kbe(event){
-    if(event.keycode=="F"||event.keycode=="Space")isContinued=true;
-}
-document.getElementById("container").addEventListener("keydown",kbe);*/
-/*document.addEventListener("keydown", (event) => {
-if (event.key=="F") {
-    isContinued=true;
-}
-});*/
 var isFocused=false;
 var charNameTransDict;
 function charNameTransDictSave(cntd){
@@ -57,30 +48,6 @@ async function main(script){
             contentsRefresh(current[1]);break;
         }
         await waitForButtonClick();
-        /*while (isContinued){
-            isContinued=false;
-            break;
-        }*/
-    }
-    /*for (var [currentKey,currentValue] in [Object.keys(script),Object.values(script)]){
-        console.log(currentKey,currentValue);
-        switch(currentKey){
-            case "sceneSet":sceneSet(currentValue);break;
-            default:if(currentKey!=currentCharName)charSet(currentKey);
-            contentsRefresh(currentValue);break;
-        }
-        while (isContinued){
-            isContinued=false;
-            break;
-        }
-    }*/
-    /*var keys=Object.keys(script);
-    var values=Object.values(script);
-    console.log(keys);
-    console.log(values);
-    for (i=0;i<=keys.length;i++){
-        console.log(keys[i]+' '+values[i]);
-    }*/
 }
 var searchURL=window.location.search;
 searchURL=searchURL.substring(1, searchURL.length);
