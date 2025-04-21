@@ -47,7 +47,7 @@ async function main(script){
             if(current[0]!=currentCharName)charSet(current[0]);
             contentsRefresh(current[1]);break;
         }
-        await waitForButtonClick();
+        if(current[0]!="sceneSet")await waitForButtonClick();
 }
 var searchURL=window.location.search;
 searchURL=searchURL.substring(1, searchURL.length);
