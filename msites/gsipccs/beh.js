@@ -1,5 +1,3 @@
-var isFocused=false;
-//var charNameTransDict={};
 var charNameTransDict={
     "Aether": "空",
     "Albedo": "阿贝多",
@@ -99,9 +97,9 @@ var charNameTransDict={
     "Yunjin": "云瑾",
     "Zhongli": "钟离"
 };
-/*function charNameTransDictSave(cntd){
-    charNameTransDict=cntd;
-}*/
+var isFocused=false;
+var isContinued=false;
+var currentCharName="";
 function waitForButtonClick() {
     console.log("Please.")
     return new Promise((resolve) => {
@@ -110,7 +108,7 @@ function waitForButtonClick() {
         });
     });
 }
-var isContinued=false;
+
 function sceneSet(sceneId){
     console.log(sceneId);
     console.log("Scenes/"+sceneId+".png");
@@ -119,6 +117,7 @@ function sceneSet(sceneId){
 function charSet(charName){
     console.log(charName);
     document.getElementById("character").src="NewCharacters/"+charName+".png";
+    document.getElementById("characterMix").src="NewCharacters/"+charName+".png";
     document.getElementById("iNTitle").innerHTML=charNameTransDict[charName];
 }
 function contentsRefresh(content){
@@ -133,7 +132,7 @@ function undoFocus(){
     isFocused=false;
     document.getElementById("focusDiv").style="display:none;";
 }
-var currentCharName="";
+
 async function main(script){
     console.log(script);
     for (var current of script){
@@ -146,12 +145,25 @@ async function main(script){
             if(current[0]!=currentCharName)charSet(current[0]);
             contentsRefresh(current[1]);break;
         }
-        if(current[0]!="sceneSet"){await waitForButtonClick();}
+        if(current[0]!="sceneSet"){
+            await waitForButtonClick();
+            setTimeout('document.getElementById("continue").style="display:none;";',0);
+            setTimeout('document.getElementById("continue").style="display:block;";',1000);
+        }
     }
 }
-var searchURL=window.location.search;
-searchURL=searchURL.substring(1, searchURL.length);
-var jsonName="Scripts/" + ((searchURL.split("&")[2]).split("=")[1] + ".json");
-console.log(jsonName);
-$.getJSON(jsonName,main);
-//$.getJSON("NewCharacters/CharNameTrans.json",charNameTransDictSave);
+
+var searchURL=window.location.search.split("&");
+//?scriptId=test4&charName=pgEON鸽子公主&charGender=Aether
+//searchURL=searchURL.substring(1, searchURL.length);
+var searchURLList=[];
+var j;
+for (var i=0;i<searchURL.length;i++){
+    j=searchURL[i].split("=")[0];
+    k=searchURL[i].split("=")[1];
+    searchURLList+=[j,k];
+}
+console.log(searchURLList);
+//var jsonName="Scripts/" + ((searchURL.split("&")[2]).split("=")[1] + ".json");
+//console.log(jsonName);
+$.getJSON("Scripts/test3.json",main);

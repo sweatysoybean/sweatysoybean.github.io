@@ -29,12 +29,21 @@ bottom:0;
 display:flex;
 justify-content:flex-end;
 position:absolute;
-left:220px;
-top:130px;
+left:280px;
+top:220px;
 bottom:0;
 width:1000px;
 height:800px;
 overflow:hidden;
+}
+#character{
+filter:hue-rotation(30deg);
+-ms-filter:hue-rotation(30deg);
+}
+#characterMix{
+display:none;
+position:absolute;
+filter:brightness(0) opacity(0.2);
 }
 img{
 display:inline-block;
@@ -104,7 +113,10 @@ background:none;
 border:none;
 color:#FCC509;
 }
-#continue p{
+#cop{
 font-weight:900;
 font-size:48px;
+}
+#cop:hover{
+font-size:56px;
 }
