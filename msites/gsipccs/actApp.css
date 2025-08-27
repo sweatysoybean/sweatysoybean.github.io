@@ -8,6 +8,34 @@ user-select:none;
 ::-webkit-scrollbar{
 display:none;
 }
+html{
+font-size:10px;
+}
+@media screen and (max-height:800px){
+html{
+font-size:8px;
+}
+}
+@media screen and (max-height:700px){
+html{
+font-size:7px;
+}
+}
+@media screen and (max-height:600px){
+html{
+font-size:6px;
+}
+}
+@media screen and (max-height:500px){
+html{
+font-size:5px;
+}
+}
+@media screen and (max-height:400px){
+html{
+font-size:4px;
+}
+}
 @font-face{
 font-family:"Genshin";
 src:url("Genshin.ttf") format("truetype");
@@ -29,11 +57,11 @@ bottom:0;
 display:flex;
 justify-content:flex-end;
 position:absolute;
-left:280px;
-top:220px;
+left:15%;
+top:16%;
 bottom:0;
-width:1000px;
-height:800px;
+width:50%;
+height:80%;
 overflow:hidden;
 }
 #character{
@@ -50,7 +78,7 @@ display:inline-block;
 height:100%;
 }
 #information{
-padding:5px;
+padding:0.5rem;
 position:absolute;
 bottom:0;
 width:100%;
@@ -64,7 +92,7 @@ top:0;
 width:100%;
 }
 #iNTitle{
-font-size:48px;
+font-size:3.2rem;
 font-family:"Genshin";
 color:#FCC509;
 }
@@ -84,30 +112,30 @@ top:50%;
 left:50%;
 transform:translateY(-50%);
 transform:translateX(-50%);
-font-size:35px;
+font-size:3.2rem;
 font-family:"Genshin";
 color:#FFF;
 }
 hr{
 position:relative;
 width:60%;
-height:2px;
+height:0.2rem;
 background-color:rgba(252,197,9,0.5) !important;
 border:none;
-margin-top:5px;
-margin-bottom:5px;
+margin-top:0.5rem;
+margin-bottom:0.5rem;
 }
 #infoContents{
-padding:5px;
+padding:0.5rem;
 }
 #iC{
-font-size:32px;
+font-size:3.2rem;
 font-family:"Genshin";
 color:#fff;
 }
 #continue{
 position:absolute;
-bottom:10px;
+bottom:1rem;
 left:50%;
 transform:translateX(-50%);
 z-index:10;
@@ -117,10 +145,10 @@ color:#FCC509;
 }
 #cop{
 font-weight:900;
-font-size:48px;
+font-size:4.8rem;
 }
 #cop:hover{
-font-size:56px;
+font-size:5.6rem;
 }
 #selectBox{
 /*display:flex;*/
@@ -133,9 +161,9 @@ width:30%;
 height:30%;
 align-items:end;
 }
-.selection{
+/*.selection{
 position:relative;
-font-size:32px;
+font-size:3.2rem;
 font-family:"Genshin";
 color:#fff;
 padding:8px;
@@ -144,4 +172,4 @@ background-color:rgba(0,0,0,0.5);
 border-radius:28px;
 width:100%;
 margin-top:20px;
-}
+}*/

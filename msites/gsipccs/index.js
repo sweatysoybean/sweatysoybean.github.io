@@ -80,7 +80,12 @@ function toDoLogin(){
     setTimeout(login,500);
 }
 function start(scriptId){
-    window.location.href="act.html"+window.location.search+"&scriptId="+scriptId.toString();
+    if(window.location.search){
+        window.location.href="act.html"+window.location.search+"&scriptId="+scriptId.toString();
+    }else{
+        window.location.href="act.html?scriptId="+scriptId.toString();
+    }
+
 }
 function startBySearch(){
     window.location.href="act.html"+window.location.search+"&scriptId="+document.getElementsByName("scriptId")[0].value;
