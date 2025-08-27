@@ -2,10 +2,91 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8" />
-    <title>类原神对话小站</title>
+    <title>汗豆OP站</title>
     <link rel="stylesheet" href="indexApp.css" />
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
 </head>
 <body>
+<div id="container">
+    <div id="headBackground"></div>
+    <div id="mainContext">
+        <h1>汗豆OP站 - 首页</h1>
+        <div class="line">
+            <div class="column">
+                <h2>玩家信息自定义</h2>
+                <form action="index.html">
+                    <p>可以自行键入玩家昵称和选择空或荧体验：（昵称不建议太长）</p>
+                    <input name="charName" value="旅行者" />
+                    <select name="charGender">
+                        <option value="Lumine">荧</option>
+                        <option value="Aether">空</option>
+                    </select>
+                    <p>也可以自定义<span class="anemo">流浪者</span>和<span class="geo">纳塔龙伙伴</span>的名称（非必须）：</p>
+                    <input name="wandererName" value="流浪者" />
+                    <input name="saurianName" value="土豆饼" />
+                    <p>自定义更改完毕请点击确认：</p>
+                    <input type="submit" id="submit" value="确认" />
+                </form>
+            </div>
+            <div class="column">
+                <h2>选择脚本</h2>
+                <div id="searchBox">
+                    <input name="scriptId" placeholder="输入脚本ID……"/>
+                    <button onclick="javascript:startBySearch();">进入</button>
+                </div>
+                <p>精选</p>
+                <div id="scriptsDisplay"></div>
 
+            </div>
+        </div>
+        <div class="line">
+            <div class="column">
+                <h2>声明</h2>
+                <p>原神旮旯给木只是一个名字，并非真的Gal。</p>
+                <p>原神旮旯给木在网站上演出所用脚本分为公开和私密，且都不应涉及违禁内容。</p>
+                <p>上述脚本由用户提供，公开内容我会打上标签（关于谁，有无cp向，有无ooc，是否为纯玩抽象等等），如涉及不同角色喜恶和认为对角色不尊重又或者ooc（Out Of Character）等，自行避雷，不代表网站观点。</p>
+                <p>使用角色立绘素材来自网络上已公开的源（见下）。</p>
+                <p>使用的背景图是作者本人在游戏内实地截图。</p>
+                <p>未曾涉及什么金钱和巨大人流量，想必没有什么大问题罢。</p>
+                <hr />
+                <p>网站是静态网站，总而言之更新内容需要作者本人手动修改或增添并统一上传更新，不能在网站上直接修改或增删内容，也没必要存储账号信息实行相关制度。</p>
+                <p>修改的名字在点击确认后可以看到网址后面多了一小串内容（以下用火元素颜色标注；中文可能变成一堆百分号加上一堆字母的形式，这个不用管），此时或许可以就着此时的网址链接保存。</p>
+                <p>示例：https://sweatysoybean.github.io/msites/gsipccs/index.html<span class="pyro">?charName=旅行者&charGender=Lumine&wandererName=流浪者&saurianName=土豆饼</span></p>
+                <p>如果已经带着网址链接里面的玩家信息（如上所示）载入，会像你刚刚完成自定义点击确认时那样弹出窗口。网址链接后面那串东西可以自己输入，这个懒得解释，但是总之可以做到故意让他信息不全，这样也会使用默认的信息，比如没有玩家名则默认旅行者。</p>
+                <p>虽然这串东西就在网址链接里面了，但是这其实是URL参数，总之网站并不会存储你的信息（但浏览器和网络服务商会不会，看你什么情况咯）。</p>
+                <p>上面那个选择空荧的下拉选择框怎么设置边框样式都没用我真的没招了，所以只能让它特立独行摆着那个不和谐白色方角细边框了。</p>
+                <p>呵呵呵是的去网上存了一下七元素色号如上所示。</p>
+                <hr />
+                <p>立绘源：提瓦特小助手、米游社玩家发布；大部分来自米游社@风千诺、瓦雷莎立绘来自米游社@符墨凛幽、伊涅芙立绘来自米游社梅讯。</p>
+            </div>
+            <div class="column">
+                <h2>介绍</h2>
+                <p>借着流汗黄豆百科伟大遗产——域名，开创的OP聚集地。</p>
+                <p>聚集的OP目前也就只会是一些作者本人的同学了，或者说为了展示成果给一些也是同学或者之前是同学的、尚未被或者已脱离原神的污染的入看，总之呢看的人我都认识。当然，也可以小范围传播给自己的好友。然后，毕竟我可能做个介绍片放B站上，所以应该还会有B站来的路人。</p>
+                <p>最主要的功能就是原神旮旯给木力，以2D网页的形式模拟原神剧情对话，由于实现的样子被评价像Gal Game，故得名。</p>
+                <p>之后我也可能会塞一些原神角色信息、原神玩法小工具等相关的东西在里面。如果弄起来可能是什么比较全的结果兴趣减退又长时间不更新的，那这个就不好说了。</p>
+                <p>以及，除了原神旮旯给木之外都是次要的，所以网站上不会特意声明“这块东西是给原神旮旯给木的”这样的话。</p><br />
+                <h2>公告</h2>
+                <p>本网站最后更新时间：2025年8月11日</p>
+                <p>当前网站版本：0.9</p>
+                <p>角色库最新角色：<span class="electro">伊涅芙</span></p>
+                <p>场景库最新场景：沃陆之邦</p><br />
+                <h2>建议</h2>
+                <p>以面向电脑为主，分辨率1080p并使用全屏模式最佳。不知道如果大于1080p会有什么效果，但是图片只有1080p。</p>
+                <p>若为移动端请横屏体验。</p>
+                <p>相信大家用的浏览器版本不会太过老旧。我暂不想考虑兼容问题和无障碍问题，但是主流网站（权威如Mozilla.org，或者CSDN一类博客网站，又或者是如Runoob等）的教学都或多或少强调这一问题，灌输这一理念，但我也不是做什么重要官网，受众上就不太需要考虑。</p>
+            </div>
+        </div>
+        <div class="line">
+            <div class="column">
+
+            </div>
+            <div class="column">
+
+            </div>
+        </div>
+    </div>
+</div>
 </body>
+<script src="index.js"></script>
 </html>
