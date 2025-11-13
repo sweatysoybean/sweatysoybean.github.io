@@ -39,7 +39,7 @@ var charNameTransDict={
     "Iansan": "伊安珊",
     "Inaffa": "伊涅芙",
     "Jean": "琴",
-    "Kachina": "卡奇娜",
+    "Kachina": "卡齐娜",
     "KaedeharaKazuha": "枫原万叶",
     "Kaeya": "凯亚",
     "KamisatoAyaka": "神里绫华",
@@ -57,10 +57,12 @@ var charNameTransDict={
     "Lumine": "荧",
     "Lyney": "林尼",
     "Lynnette": "琳妮特",
+    "Mavuika": "玛薇卡",
     "Mika": "米卡",
     "Mona": "莫娜",
     "Mualani": "玛拉妮",
     "Nahida": "纳西妲",
+    "Navia": "娜维娅",
     "Neuvellette": "纳维莱特",
     "Nilou": "妮露",
     "Ningguang": "凝光",
@@ -183,7 +185,12 @@ function waitForButtonClick() {
 }
 function sceneSet(sceneId){
     currentScene=sceneId;
-    document.getElementById("background").src="Scenes/"+sceneId+currentTime+".png";
+    if(validScenes.includes(+currentTime)){
+        document.getElementById("background").src="Scenes/"+sceneId+currentTime+".png";
+    }else{
+        timeSet(currentTime);
+    }
+
 }
 function timeSetError(replace,time){
     console.log("Scenes/"+currentScene+time+".png is missing. replaced with Scenes/"+currentScene+replace+".png");
@@ -199,56 +206,56 @@ function timeSet(time){
             switch(time){
                 case 'M':
                     if(validScenes.includes(currentScene+'D')){
-                        document.getElementById("background").src="Scenes/"+currentScene+"D.png";
                         timeSetError('D',time);
+                        document.getElementById("background").src="Scenes/"+currentScene+"D.png";
                     }else if(validScenes.includes(currentScene+'S')){
-                        document.getElementById("background").src="Scenes/"+currentScene+"S.png";
                         timeSetError('S',time);
-                    }else if(validScenes.includes(currentScene+'N')){
                         document.getElementById("background").src="Scenes/"+currentScene+"S.png";
+                    }else if(validScenes.includes(currentScene+'N')){
                         timeSetError('N',time);
+                        document.getElementById("background").src="Scenes/"+currentScene+"N.png";
                     }else{
                         console.log("Scenes/"+currentScene+" is missing. Can't find scene instead.");
                     }
                     break;
                 case 'D':
                     if(validScenes.includes(currentScene+'M')){
-                        document.getElementById("background").src="Scenes/"+currentScene+"M.png";
                         timeSetError('M',time);
+                        document.getElementById("background").src="Scenes/"+currentScene+"M.png";
                     }else if(validScenes.includes(currentScene+'S')){
-                        document.getElementById("background").src="Scenes/"+currentScene+"S.png";
                         timeSetError('S',time);
-                    }else if(validScenes.includes(currentScene+'N')){
                         document.getElementById("background").src="Scenes/"+currentScene+"S.png";
+                    }else if(validScenes.includes(currentScene+'N')){
                         timeSetError('N',time);
+                        document.getElementById("background").src="Scenes/"+currentScene+"N.png";
                     }else{
                         console.log("Scenes/"+currentScene+" is missing. Can't find scene instead.");
                     }
                     break;
                 case 'S':
                     if(validScenes.includes(currentScene+'N')){
-                        document.getElementById("background").src="Scenes/"+currentScene+"N.png";
                         timeSetError('N',time);
+                        document.getElementById("background").src="Scenes/"+currentScene+"N.png";
                     }else if(validScenes.includes(currentScene+'D')){
-                        document.getElementById("background").src="Scenes/"+currentScene+"D.png";
                         timeSetError('D',time);
+                        document.getElementById("background").src="Scenes/"+currentScene+"D.png";
                     }else if(validScenes.includes(currentScene+'M')){
-                        document.getElementById("background").src="Scenes/"+currentScene+"M.png";
                         timeSetError('M',time);
+                        document.getElementById("background").src="Scenes/"+currentScene+"M.png";
                     }else{
                         console.log("Scenes/"+currentScene+" is missing. Can't find scene instead.");
                     }
                     break;
                 case 'N':
                     if(validScenes.includes(currentScene+'S')){
-                        document.getElementById("background").src="Scenes/"+currentScene+"S.png";
                         timeSetError('S',time);
+                        document.getElementById("background").src="Scenes/"+currentScene+"S.png";
                     }else if(validScenes.includes(currentScene+'D')){
-                        document.getElementById("background").src="Scenes/"+currentScene+"D.png";
                         timeSetError('D',time);
+                        document.getElementById("background").src="Scenes/"+currentScene+"D.png";
                     }else if(validScenes.includes(currentScene+'M')){
-                        document.getElementById("background").src="Scenes/"+currentScene+"M.png";
                         timeSetError('M',time);
+                        document.getElementById("background").src="Scenes/"+currentScene+"M.png";
                     }else{
                         console.log("Scenes/"+currentScene+" is missing. Can't find scene instead.");
                     }
@@ -260,6 +267,7 @@ function timeSet(time){
         }
 
     }else{
+        console.log("I think it's well.")
         document.getElementById("background").src="Scenes/"+currentScene+time+".png";
     }
 }
@@ -310,6 +318,9 @@ function undoFocus(){
 }
 
 async function main(script){
+    if(urls.skip){
+        script=script.slice(Number(urls.skip));
+    }
     console.log(script);
     for (var current of script){
         current[1]=current[1].replace("旅行者",urls.charName);

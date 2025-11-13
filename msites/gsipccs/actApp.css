@@ -57,11 +57,11 @@ bottom:0;
 display:flex;
 justify-content:flex-end;
 position:absolute;
-left:15%;
-top:16%;
+left:35%;
+top:26%;
 bottom:0;
-width:50%;
-height:80%;
+width:35%;
+height:70%;
 overflow:hidden;
 }
 #character{
