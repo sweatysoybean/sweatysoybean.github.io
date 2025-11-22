@@ -1,5 +1,6 @@
 var charNameTransDict={
     "Aether": "空",
+    "Aino": "爱诺",
     "Albedo": "阿贝多",
     "Alhaitham": "艾尔海森",
     "Aloy": "埃洛伊",
@@ -139,7 +140,9 @@ var validScenes=[
     'S04N','S04S','S05D','S05M','S05N','S05S','S06O','S07O','S08D','S08M','S08N','S08S','S09D','S09M','S09N',
     'S09S','S10D','S10M','S10N','S10S','S11D','S11M','S11N','S11R','S11S','S12N','S13D','S13M','S13N','S13S',
     'S14D','S14N','S15D','S15M','S15N','S15S','S16D','S16M','S16N','S16S','S17S','S18D','S18M','S18N','S18S',
-    'T01S','T02D','T02M','T02N','T02S','T03D','T03M','T03N','T03S','T04O']
+    'T01S','T02D','T02M','T02N','T02S','T03D','T03M','T03N','T03S','T04O'];
+var checkedChar=[];
+var checkedScenes=[];
 var isFocused=false;
 var isContinued=false;
 var currentCharName="";
@@ -185,7 +188,7 @@ function waitForButtonClick() {
 }
 function sceneSet(sceneId){
     currentScene=sceneId;
-    if(validScenes.includes(+currentTime)){
+    if(validScenes.includes(currentScene+currentTime)){
         document.getElementById("background").src="Scenes/"+sceneId+currentTime+".png";
     }else{
         timeSet(currentTime);
@@ -316,33 +319,78 @@ function undoFocus(){
     isFocused=false;
     document.getElementById("focusDiv").style="display:none;";
 }
-
+/*async function preloadImages(arguments) {
+    return new Promise(async (resolve) => {
+            //$('<img>').attr('src', arguments).appendTo('body');
+            var image=document.createElement('img');
+            image.setAttribute("src",arguments);
+            image.setAttribute("class","preloads");
+            document.getElementsByTagName("body")[0].appendChild(image);
+            console.log("pl-added");
+            document.getElementsByClassName("preloads")[document.getElementsByClassName("preloads").length-1].onload=resolve();
+            .addEventListener('onload',() => {
+                resolve();
+            });
+        });
+};*/
+function preloadImages(imageN){
+    var image=document.createElement('img');
+    image.setAttribute("src",imageN);
+    image.setAttribute("class","preloads");
+    document.getElementsByTagName("body")[0].appendChild(image);
+    console.log("pl-added");
+}
 async function main(script){
     if(urls.skip){
         script=script.slice(Number(urls.skip));
     }
     console.log(script);
     for (var current of script){
-        current[1]=current[1].replace("旅行者",urls.charName);
-        current[0]=current[0].replace("土豆饼",urls.saurianName);
-        current[1]=current[1].replace("流浪者",urls.wandererName);
-        current[1]=current[1].replace("土豆饼",urls.saurianName);
-        switch (current[0]){
-            case "sceneSet":sceneSet(current[1]);break;
-            case "timeSet":timeSet(current[1]);break;
-            case "focus":focus(current[1]);break;
-            default:
-            if(isFocused)undoFocus();
-            if(current[0]!=currentCharName)charSet(current[0]);
-            contentsRefresh(current[1]);break;
+        if (Object.keys(charNameTransDict).includes(current[0].replace("Traveller",urls.charGender).replace("tRAVELLER",cgupsd))
+            &&!(checkedChar.includes(current[0].replace("Traveller",urls.charGender).replace("tRAVELLER",cgupsd)))){
+            checkedChar.push(current[0].replace("Traveller",urls.charGender).replace("tRAVELLER",cgupsd));
         }
-        if(current[0]!="sceneSet" && current[0]!="timeSet"){
-            console.log(current[0])
-            await waitForButtonClick();
-            setTimeout('document.getElementById("continue").style="display:none;";',0);
-            setTimeout('document.getElementById("continue").style="display:block;";',100);
+        if(current[0]=="sceneSet"){
+            currentScene=current[1];
+        }
+        if(current[0]=="timeSet"){
+            currentTime=current[1];
+        }
+        if(validScenes.includes(currentScene+currentTime)&&!(checkedScenes.includes(currentScene+currentTime))){
+            checkedScenes.push(currentScene+currentTime);
         }
     }
+    console.log(checkedChar,checkedScenes);
+    for (var i of checkedChar){
+        preloadImages("NewCharacters/"+i+".png");
+    }
+    for (var i of checkedScenes){
+        preloadImages("Scenes/"+i+".png");
+    }
+    window.onload=async function(){
+        for (var current of script){
+            current[1]=current[1].replace("旅行者",urls.charName);
+            current[0]=current[0].replace("土豆饼",urls.saurianName);
+            current[1]=current[1].replace("流浪者",urls.wandererName);
+            current[1]=current[1].replace("土豆饼",urls.saurianName);
+            switch (current[0]){
+                case "sceneSet":sceneSet(current[1]);break;
+                case "timeSet":timeSet(current[1]);break;
+                case "focus":focus(current[1]);break;
+                default:
+                if(isFocused)undoFocus();
+                if(current[0]!=currentCharName)charSet(current[0]);
+                contentsRefresh(current[1]);break;
+            }
+            if(current[0]!="sceneSet" && current[0]!="timeSet"){
+                console.log(current[0])
+                await waitForButtonClick();
+                setTimeout('document.getElementById("continue").style="display:none;";',0);
+                setTimeout('document.getElementById("continue").style="display:block;";',100);
+            }
+        }
+    }
+
 }
 
 /*var searchURL=window.location.search.split("&");
